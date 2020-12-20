@@ -1,0 +1,6252 @@
+{
+    "MX Linux": {
+        "Based on": [
+            "Debian (Stable), anti XOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Desktop, From RAM, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "1 (3,412 hits per day)"
+        ]
+    },
+    "Manjaro Linux": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "Austria, Germany, France"
+        ],
+        "Architecture": [
+            "aarch64, x86_64"
+        ],
+        "Desktop": [
+            "Awesome, bspwm, Budgie, Cinnamon, GNOME, i3, KDE Plasma, LXQt, MATE, Openbox, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "2 (2,343 hits per day)"
+        ]
+    },
+    "Linux Mint": {
+        "Based on": [
+            "Debian, Ubuntu (LTS)"
+        ],
+        "Origin": [
+            "Ireland"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Cinnamon, MATE, Xfce"
+        ],
+        "Category": [
+            "Beginners, Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "3 (2,082 hits per day)"
+        ]
+    },
+    "Pop!_OS": {
+        "Based on": [
+            "Ubuntu, Debian"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOMECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "4 (1,828 hits per day)"
+        ]
+    },
+    "Ubuntu": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Isle of Man"
+        ],
+        "Architecture": [
+            "armhf, i686, powerpc, ppc64el, s390x, x86_64"
+        ],
+        "Desktop": [
+            "GNOME, Unity"
+        ],
+        "Category": [
+            "Beginners, Desktop, Server, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "5 (1,378 hits per day)"
+        ]
+    },
+    "Debian": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Global"
+        ],
+        "Architecture": [
+            "aarch64, armel, armhf, i386, i686, mips, mipsel, ppc64el, s390x, x86_64"
+        ],
+        "Desktop": [
+            "After Step, Awesome, Blackbox, Cinnamon, Fluxbox, flwm, FVWM, GNOME, i3, Ice WM, ion, JWM, KDE, LXDE, LXQt, MATE, Openbox, pekwm, Ratpoison, WMaker, XBMC, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "6 (1,247 hits per day)"
+        ]
+    },
+    "elementary OS": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Pantheon"
+        ],
+        "Category": [
+            "Beginners, Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "7 (1,133 hits per day)"
+        ]
+    },
+    "Fedora": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "aarch64, armhfp, x86_64"
+        ],
+        "Desktop": [
+            "Awesome, Cinnamon, Deepin, Enlightenment, GNOME, KDE Plasma, LXDE, LXQt, MATE, Openbox, Pantheon, Ratpoison, Xfce"
+        ],
+        "Category": [
+            "Desktop, Server, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "8 (966 hits per day)"
+        ]
+    },
+    "EndeavourOS": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "Netherlands"
+        ],
+        "Architecture": [
+            "aarch64, x86_64"
+        ],
+        "Desktop": [
+            "Budgie, Cinnamon, Deepin, GNOME, i3, KDE Plasma, LXQt, MATE, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "9 (882 hits per day)"
+        ]
+    },
+    "Solus": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Ireland"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Budgie, GNOME, KDE Plasma, MATECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "10 (862 hits per day)"
+        ]
+    },
+    "KDE neon": {
+        "Based on": [
+            "Debian, Ubuntu (LTS)"
+        ],
+        "Origin": [
+            "United Kingdom"
+        ],
+        "Architecture": [
+            "aarch64, x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "11 (796 hits per day)"
+        ]
+    },
+    "openSUSE": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Germany"
+        ],
+        "Architecture": [
+            "aarch64, armhf, i686, ppc64, ppc64el, s390x, x86_64"
+        ],
+        "Desktop": [
+            "Cinnamon, Enlightenment, GNOME, Ice WM, KDE Plasma, LXDE, LXQt, MATE, Xfce"
+        ],
+        "Category": [
+            "Desktop, Server, Live Medium, Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "12 (754 hits per day)"
+        ]
+    },
+    "Zorin OS": {
+        "Based on": [
+            "Debian, Ubuntu (LTS)"
+        ],
+        "Origin": [
+            "Ireland"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOME, Xfce"
+        ],
+        "Category": [
+            "Beginners, Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "13 (729 hits per day)"
+        ]
+    },
+    "Ubuntu Kylin": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "China"
+        ],
+        "Architecture": [
+            "aarch64, x86_64"
+        ],
+        "Desktop": [
+            "UKUICategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "14 (713 hits per day)"
+        ]
+    },
+    "deepin": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "China"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Deepin"
+        ],
+        "Category": [
+            "Desktop"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "15 (679 hits per day)"
+        ]
+    },
+    "Linuxfx": {
+        "Based on": [
+            "Debian, Mint"
+        ],
+        "Origin": [
+            "Brazil"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "16 (649 hits per day)"
+        ]
+    },
+    "Arch Linux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Canada"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Cinnamon, Enlightenment, GNOME, KDE, LXDE, MATE, Xfce"
+        ],
+        "Category": [
+            "Desktop, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "17 (638 hits per day)"
+        ]
+    },
+    "antiX": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Greece"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Fluxbox, Ice WM, JWMCategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "18 (566 hits per day)"
+        ]
+    },
+    "CentOS": {
+        "Based on": [
+            "Fedora, Red Hat"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "aarch64, ppc64le, x86_64"
+        ],
+        "Desktop": [
+            "GNOME, KDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "19 (552 hits per day)"
+        ]
+    },
+    "Puppy Linux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Australia"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "JWM, Openbox"
+        ],
+        "Category": [
+            "Desktop, From RAM, Old Computers, Live Medium, Netbooks"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "20 (486 hits per day)"
+        ]
+    },
+    "ArcoLinux": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "Belgium"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Awesome, bspwm, Budgie, Cinnamon, Deepin, GNOME, i3, MATE, KDE Plasma, Openbox, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "21 (483 hits per day)"
+        ]
+    },
+    "Kali Linux": {
+        "Based on": [
+            "Debian (Testing)"
+        ],
+        "Origin": [
+            "Switzerland"
+        ],
+        "Architecture": [
+            "armel, armhf, i686, x86_64"
+        ],
+        "Desktop": [
+            "Enlightenment, GNOME, KDE Plasma, LXDE, MATE, Xfce"
+        ],
+        "Category": [
+            "Data Rescue, Forensics, Live Medium, Raspberry Pi, Security"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "22 (467 hits per day)"
+        ]
+    },
+    "PCLinuxOS": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma, MATE, Xfce"
+        ],
+        "Category": [
+            "Beginners, Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "23 (460 hits per day)"
+        ]
+    },
+    "FreeBSD": {
+        "OS Type": [
+            "BSDBased on"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "arm, aarch64, armel, i386, ia64, mips, mipsel, sparc64, pc98, powerpc, powerpc64, ps3, x86_64, xbox"
+        ],
+        "Desktop": [
+            "After Step, Awesome, Blackbox, Enlightenment, Fluxbox, GNOME, Ice WM, KDE Plasma, LXDE, Openbox, WMaker, Xfce"
+        ],
+        "Category": [
+            "Desktop, Firewall, Raspberry Pi, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "24 (417 hits per day)"
+        ]
+    },
+    "Linux Lite": {
+        "Based on": [
+            "Debian, Ubuntu (LTS)"
+        ],
+        "Origin": [
+            "New Zealand"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Beginners, Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "25 (416 hits per day)"
+        ]
+    },
+    "Mageia": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "aarch64, armv7, i586, x86_64"
+        ],
+        "Desktop": [
+            "Cinnamon, GNOME, Ice WM, KDE, MATE, LXDE, LXQt, Openbox, WMaker, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "26 (402 hits per day)"
+        ]
+    },
+    "EasyOS": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Australia"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "JWMCategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "27 (393 hits per day)"
+        ]
+    },
+    "SparkyLinux": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Poland"
+        ],
+        "Architecture": [
+            "armhf, i686, x86_64"
+        ],
+        "Desktop": [
+            "Budgie, Enlightenment, JWM, KDE Plasma, LXDE, LXQt, MATE, Openbox, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "28 (385 hits per day)"
+        ]
+    },
+    "Lubuntu": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "France, Taiwan"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "LXDE, LXQt"
+        ],
+        "Category": [
+            "Live Medium, Netbooks"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "29 (346 hits per day)"
+        ]
+    },
+    "Peppermint OS": {
+        "Based on": [
+            "Debian, Lubuntu (LTS)"
+        ],
+        "Origin": [
+            "United Kingdom"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "LXDE, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Netbooks"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "30 (339 hits per day)"
+        ]
+    },
+    "Q4OS": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Germany"
+        ],
+        "Architecture": [
+            "aarch64, armhf, i686, x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma, Trinity"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Old Computers"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "31 (333 hits per day)"
+        ]
+    },
+    "Garuda Linux": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "India"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "bspwm, Cinnamon, Deepin, GNOME, i3, KDE Plasma, LXQt, MATE, Recbox, UKUI, Wayfire, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Media"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "32 (331 hits per day)"
+        ]
+    },
+    "Tails": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Ireland"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOMECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "33 (323 hits per day)"
+        ]
+    },
+    "Slackware Linux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "arm, i586, s390, x86_64"
+        ],
+        "Desktop": [
+            "Blackbox, Fluxbox, FVWM, KDE, WMaker, Xfce"
+        ],
+        "Category": [
+            "Desktop, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "34 (309 hits per day)"
+        ]
+    },
+    "Xubuntu": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "Isle of Man"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Desktop"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "35 (297 hits per day)"
+        ]
+    },
+    "Kubuntu": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "Isle of Man"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Desktop, Server, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "36 (294 hits per day)"
+        ]
+    },
+    "Parrot": {
+        "Based on": [
+            "Debian (Testing)"
+        ],
+        "Origin": [
+            "Italy"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma, MATECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "37 (285 hits per day)"
+        ]
+    },
+    "Endless OS": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "EOS Shell (GNOME)"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "38 (279 hits per day)"
+        ]
+    },
+    "Bluestar Linux": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Desktop"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "39 (267 hits per day)"
+        ]
+    },
+    "Devuan GNU+Linux": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Global"
+        ],
+        "Architecture": [
+            "armhf, i686, x86_64"
+        ],
+        "Desktop": [
+            "Cinnamon, KDE Plasma, LXQt, MATE, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Server, Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "40 (257 hits per day)"
+        ]
+    },
+    "Void": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Spain"
+        ],
+        "Architecture": [
+            "aarch64, armv6, armv7, i686, x86_64"
+        ],
+        "Desktop": [
+            "Cinnamon, Enlightenment, LXDE, LXQt, MATE, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "41 (256 hits per day)"
+        ]
+    },
+    "Ubuntu MATE": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "United Kingdom"
+        ],
+        "Architecture": [
+            "aarch64, armhf, i686, powerpc, x86_64"
+        ],
+        "Desktop": [
+            "MATECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "42 (255 hits per day)"
+        ]
+    },
+    "KaOS": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "44 (249 hits per day)"
+        ]
+    },
+    "GeckoLinux": {
+        "Based on": [
+            "open SUSEOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Budgie, Cinnamon, GNOME, Ice WM, KDE Plasma, LXQt, MATE, Pantheon, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "43 (254 hits per day)"
+        ]
+    },
+    "ReactOS": {
+        "OS Type": [
+            "Other OSBased on"
+        ],
+        "Origin": [
+            "Russia"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "React OS Explorer"
+        ],
+        "Category": [
+            "Desktop, Old Computers, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "46 (238 hits per day)"
+        ]
+    },
+    "Gentoo Linux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i486, i586, i686, x86_64, alpha, arm, hppa, ia64, mips, powerpc, ppc64, sparc64"
+        ],
+        "Desktop": [
+            "After Step, Awesome, Blackbox, Enlightenment, Fluxbox, GNOME, Ice WM, KDE Plasma, LXDE, MATE, Openbox, WMaker, Xfce"
+        ],
+        "Category": [
+            "Desktop, Server, Source-based"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "45 (238 hits per day)"
+        ]
+    },
+    "Archman GNU/Linux": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "Turkey"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Deepin, GNOME, KDE Plasma, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "47 (237 hits per day)"
+        ]
+    },
+    "Alpine Linux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Norway"
+        ],
+        "Architecture": [
+            "aarch64, i486, ppc64, s390x, x86_64, armhf"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Firewall, From RAM, Raspberry Pi, Server, Security, Telephony"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "48 (235 hits per day)"
+        ]
+    },
+    "GhostBSD": {
+        "OS Type": [
+            "BSDBased on"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "MATE, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "49 (232 hits per day)"
+        ]
+    },
+    "PureOS": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOMECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "50 (231 hits per day)"
+        ]
+    },
+    "Artix Linux": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "Global"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Cinnamon, LXDE, LXQt, MATE, KDE Plasma, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "51 (230 hits per day)"
+        ]
+    },
+    "Android-x86": {
+        "Based on": [
+            "Android"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Android"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "52 (229 hits per day)"
+        ]
+    },
+    "NixOS": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Netherlands"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Awesome, Enlightenment, Fluxbox, GNOME, i3, Ice WM, KDE Plasma, Ratpoison, Xfce"
+        ],
+        "Category": [
+            "Desktop, Education, Live Medium, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "53 (229 hits per day)"
+        ]
+    },
+    "4MLinux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Poland"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "JWMCategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "54 (224 hits per day)"
+        ]
+    },
+    "BunsenLabs Linux": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Global"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Openbox"
+        ],
+        "Category": [
+            "Desktop"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "55 (218 hits per day)"
+        ]
+    },
+    "Voyager Live": {
+        "Based on": [
+            "Debian (Stable), Xubuntu"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "GNOME, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "56 (212 hits per day)"
+        ]
+    },
+    "Absolute Linux": {
+        "Based on": [
+            "Slackware"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Ice WMCategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "57 (205 hits per day)"
+        ]
+    },
+    "Feren OS": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Cinnamon, KDE Plasma"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "58 (201 hits per day)"
+        ]
+    },
+    "Nitrux": {
+        "Based on": [
+            "Ubuntu (LTS)"
+        ],
+        "Origin": [
+            "Mexico"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "NX Desktop (KDE Plasma)"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "59 (198 hits per day)"
+        ]
+    },
+    "Ultimate Edition": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "armhf, x86_64"
+        ],
+        "Desktop": [
+            "Awesome, Budgie, GNOME, KDE Plasma, MATECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "60 (197 hits per day)"
+        ]
+    },
+    "Bodhi Linux": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "Moksha (Enlightenment)"
+        ],
+        "Category": [
+            "Chromebooks, Desktop, Live Medium, Netbooks, Old Computers"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "61 (195 hits per day)"
+        ]
+    },
+    "Redo Rescue": {
+        "Based on": [
+            "Debian, Ubuntu (LTS)"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i386"
+        ],
+        "Desktop": [
+            "LXDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "64 (188 hits per day)"
+        ]
+    },
+    "Red Hat Enterprise Linux": {
+        "Based on": [
+            "Fedora"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "aarch64, i386, ia64, IBM Z, ppc, ppc64el, s390, s390x, x86_64"
+        ],
+        "Desktop": [
+            "GNOME, KDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "62 (189 hits per day)"
+        ]
+    },
+    "Linux Kodachi": {
+        "Based on": [
+            "Debian, Xubuntu"
+        ],
+        "Origin": [
+            "Oman"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Live Medium, Privacy, Security"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "63 (188 hits per day)"
+        ]
+    },
+    "ArchBang Linux": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "Canada"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "i3"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "65 (183 hits per day)"
+        ]
+    },
+    "Raspberry Pi OS": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "United Kingdom"
+        ],
+        "Architecture": [
+            "aarch64, armhf"
+        ],
+        "Desktop": [
+            "LXDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "66 (182 hits per day)"
+        ]
+    },
+    "Trisquel GNU/Linux": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "Spain"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma, LXDE, MATECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "67 (180 hits per day)"
+        ]
+    },
+    "Haiku": {
+        "OS Type": [
+            "Other OSBased on"
+        ],
+        "Origin": [
+            "Germany"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "Haiku"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "74 (172 hits per day)"
+        ]
+    },
+    "KNOPPIX": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Germany"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "GNOME, KDE, LXDE, Openbox"
+        ],
+        "Category": [
+            "Assistive, Desktop, From RAM, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "68 (178 hits per day)"
+        ]
+    },
+    "ALT Linux": {
+        "Based on": [
+            "Independent (forked from Mandrake)"
+        ],
+        "Origin": [
+            "Russia"
+        ],
+        "Architecture": [
+            "aarch64, armhf, i586, mipsel, ppc64el, riscv64, x86_64"
+        ],
+        "Desktop": [
+            "After Step, Blackbox, Cinnamon, Enlightenment, FVWM, GNOME, Ice WM, KDE, LXDE, MATE, Openbox, LXQt, WMaker, Xfce"
+        ],
+        "Category": [
+            "Data Rescue, Desktop, Education, Live Medium, Raspberry Pi, Old Computers, Security, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "69 (177 hits per day)"
+        ]
+    },
+    "Robolinux": {
+        "Based on": [
+            "Ubuntu, Debian"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Cinnamon, MATE, Xfce"
+        ],
+        "Category": [
+            "Beginners, Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "70 (176 hits per day)"
+        ]
+    },
+    "Ubuntu DesktopPack": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "Ukraine"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Budgie, Cinnamon, Deepin, GNOME, KDE Plasma, LXQt, MATE, Unity, Xfce"
+        ],
+        "Category": [
+            "Beginners, Live Medium, Desktop"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "71 (176 hits per day)"
+        ]
+    },
+    "ClearOS": {
+        "Based on": [
+            "Fedora, Red Hat"
+        ],
+        "Origin": [
+            "New Zealand"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "GNOMECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "72 (175 hits per day)"
+        ]
+    },
+    "Emmabuntüs": {
+        "Based on": [
+            "Debian (Stable), Ubuntu (LTS)"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "LXQt, Xfce"
+        ],
+        "Category": [
+            "Beginners, Desktop, Live Medium, Old Computers"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "73 (173 hits per day)"
+        ]
+    },
+    "LXLE": {
+        "Based on": [
+            "Debian, Lubuntu"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "LXDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "75 (167 hits per day)"
+        ]
+    },
+    "AV Linux": {
+        "Based on": [
+            "Debian, MX Linux"
+        ],
+        "Origin": [
+            "Canada"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "Openbox, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Multimedia"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "76 (166 hits per day)"
+        ]
+    },
+    "Enso OS": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "United Kingdom"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Xfce (Gala)"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "77 (166 hits per day)"
+        ]
+    },
+    "Ubuntu Budgie": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "United Kingdom"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Budgie"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "78 (165 hits per day)"
+        ]
+    },
+    "OpenBSD": {
+        "OS Type": [
+            "BSDBased on"
+        ],
+        "Origin": [
+            "Canada"
+        ],
+        "Architecture": [
+            "alpha, armish, aviion, hppa, i386, landisk, loongson, luna88k, octeon, powerpc, powerpc64, sgi, socppc, sparc, sparc64, x86_64, zaurus"
+        ],
+        "Desktop": [
+            "After Step, Awesome, Blackbox, Enlightenment, Fluxbox, GNOME, Ice WM, KDE, Openbox, WMaker, Xfce"
+        ],
+        "Category": [
+            "Security, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "79 (163 hits per day)"
+        ]
+    },
+    "NomadBSD": {
+        "OS Type": [
+            "BSDBased on"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "Openbox"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "80 (157 hits per day)"
+        ]
+    },
+    "Ubuntu Studio": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Multimedia"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "81 (157 hits per day)"
+        ]
+    },
+    "Qubes OS": {
+        "Based on": [
+            "Fedora"
+        ],
+        "Origin": [
+            "Poland"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Desktop, Security"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "82 (155 hits per day)"
+        ]
+    },
+    "Tiny Core Linux": {
+        "Based on": [
+            "Independent (forked from Damn Small)"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i486, x86_64"
+        ],
+        "Desktop": [
+            "dwm, Fluxbox, flwm, GNOME, Hackedbox, i3, Ice WM, JWM, Openbox, WMFSCategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "83 (152 hits per day)"
+        ]
+    },
+    "BlackArch Linux": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Awesome, Blackbox, Fluxbox, spectrwm"
+        ],
+        "Category": [
+            "Live Medium, Security, Forensics"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "84 (151 hits per day)"
+        ]
+    },
+    "DragonFly BSD": {
+        "OS Type": [
+            "BSDBased on"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Awesome, Cinnamon, Fluxbox, JWM, KDE, LXDE, MATE, Openbox, WMaker, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "85 (144 hits per day)"
+        ]
+    },
+    "OpenMandriva Lx": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "86 (143 hits per day)"
+        ]
+    },
+    "Oracle Linux": {
+        "Based on": [
+            "Red Hat"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "aarch64, i686, sparc64, x86_64"
+        ],
+        "Desktop": [
+            "GNOME, KDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "87 (141 hits per day)"
+        ]
+    },
+    "Sabayon": {
+        "Based on": [
+            "Fentoo"
+        ],
+        "Origin": [
+            "Italy"
+        ],
+        "Architecture": [
+            "armhf, x86_64"
+        ],
+        "Desktop": [
+            "Fluxbox, GNOME, KDE, LXQt, MATE, Xfce"
+        ],
+        "Category": [
+            "Beginners, Desktop, Live Medium, Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "88 (140 hits per day)"
+        ]
+    },
+    "Elive": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Belgium"
+        ],
+        "Architecture": [
+            "i486"
+        ],
+        "Desktop": [
+            "Enlightenment"
+        ],
+        "Category": [
+            "Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "89 (134 hits per day)"
+        ]
+    },
+    "MakuluLinux": {
+        "Based on": [
+            "Debian (Testing), Ubuntu"
+        ],
+        "Origin": [
+            "Vietnam"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Cinnamon, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "90 (134 hits per day)"
+        ]
+    },
+    "SteamOS": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOMECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "91 (134 hits per day)"
+        ]
+    },
+    "Clear Linux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOMECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "92 (133 hits per day)"
+        ]
+    },
+    "SmartOS": {
+        "Based on": [
+            "Solaris"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Specialist, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "93 (132 hits per day)"
+        ]
+    },
+    "ArchLabs Linux": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "New Zealand"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "94 (131 hits per day)"
+        ]
+    },
+    "Obarun": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "Switzerland"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "JWM, KDE Plasma, Openbox, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "95 (131 hits per day)"
+        ]
+    },
+    "Netrunner": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Germany"
+        ],
+        "Architecture": [
+            "aarch64, armhf, x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Beginners, Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "96 (130 hits per day)"
+        ]
+    },
+    "Septor": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Serbia"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Privacy"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "98 (130 hits per day)"
+        ]
+    },
+    "ROSA": {
+        "Based on": [
+            "Independent (forked from Mandriva)"
+        ],
+        "Origin": [
+            "Russia"
+        ],
+        "Architecture": [
+            "i586, x86_64"
+        ],
+        "Desktop": [
+            "GNOME, KDE, KDE Plasma, LXQt, MATECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "99 (128 hits per day)"
+        ]
+    },
+    "RebornOS": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOMECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "97 (130 hits per day)"
+        ]
+    },
+    "Volumio": {
+        "Based on": [
+            "Debian (Stable), Raspbian"
+        ],
+        "Origin": [
+            "Italy"
+        ],
+        "Architecture": [
+            "armhf, i386"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "101 (121 hits per day)"
+        ]
+    },
+    "MidnightBSD": {
+        "OS Type": [
+            "BSDBased on"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "Awesome, Blackbox, Cinnamon, Enlightenment, Fluxbox, GNOME, MATE, Openbox, WMaker, Xfce"
+        ],
+        "Category": [
+            "Desktop"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "102 (120 hits per day)"
+        ]
+    },
+    "Zenwalk Linux": {
+        "Based on": [
+            "Slackware"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "i486, i686, x86_64"
+        ],
+        "Desktop": [
+            "GNOME, Openbox, WMaker, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "100 (123 hits per day)"
+        ]
+    },
+    "SystemRescue": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Data Rescue, From RAM, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "104 (118 hits per day)"
+        ]
+    },
+    "ExTiX": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "Sweden"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Budgie, Deepin, KDE Plasma, LXQt"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "105 (117 hits per day)"
+        ]
+    },
+    "Porteus": {
+        "Based on": [
+            "Slackware"
+        ],
+        "Origin": [
+            "Ireland"
+        ],
+        "Architecture": [
+            "i586, x86_64"
+        ],
+        "Desktop": [
+            "Cinnamon, KDE Plasma, LXDE, LXQt, MATE, Openbox, Xfce"
+        ],
+        "Category": [
+            "From RAM, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "103 (118 hits per day)"
+        ]
+    },
+    "Simplicity Linux": {
+        "Based on": [
+            "Devuan"
+        ],
+        "Origin": [
+            "United Kingdom"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Cinnamon"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "106 (113 hits per day)"
+        ]
+    },
+    "Calculate Linux": {
+        "Based on": [
+            "Gentoo"
+        ],
+        "Origin": [
+            "Russia"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Cinnamon, KDE Plasma, LXQt, MATE, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Server, Source-based"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "108 (108 hits per day)"
+        ]
+    },
+    "CloudReady": {
+        "Based on": [
+            "Gentoo"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "109 (108 hits per day)"
+        ]
+    },
+    "Neptune": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Germany"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "110 (106 hits per day)"
+        ]
+    },
+    "Rescuezilla": {
+        "Based on": [
+            "Debian, Ubuntu (LTS)"
+        ],
+        "Origin": [
+            "Australia"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "LXDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "107 (111 hits per day)"
+        ]
+    },
+    "GParted Live": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Fluxbox"
+        ],
+        "Category": [
+            "Disk Management, Data Rescue, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "111 (102 hits per day)"
+        ]
+    },
+    "Slackel": {
+        "Based on": [
+            "Slackware, Salix"
+        ],
+        "Origin": [
+            "Greece"
+        ],
+        "Architecture": [
+            "i486, i686, x86_64"
+        ],
+        "Desktop": [
+            "KDE, MATE, Openbox"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "112 (102 hits per day)"
+        ]
+    },
+    "IPFire": {
+        "Based on": [
+            "Independent (forked from IPCop)"
+        ],
+        "Origin": [
+            "Germany"
+        ],
+        "Architecture": [
+            "armv5tel, i586, x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "113 (97 hits per day)"
+        ]
+    },
+    "NuTyX": {
+        "Based on": [
+            "LFSOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Enlightenment, GNOME, Ice WM, JWM, KDE Plasma, LXDE, MATE, Openbox, Ratpoison, Xfce"
+        ],
+        "Category": [
+            "Desktop"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "114 (95 hits per day)"
+        ]
+    },
+    "Parted Magic": {
+        "Based on": [
+            "Slackware"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Data Rescue, Disk Management, From RAM, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "115 (95 hits per day)"
+        ]
+    },
+    "UBports": {
+        "Based on": [
+            "Ubuntu"
+        ],
+        "Origin": [
+            "Norway"
+        ],
+        "Architecture": [
+            "armhf"
+        ],
+        "Desktop": [
+            "Unity"
+        ],
+        "Category": [
+            "Mobile"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "116 (95 hits per day)"
+        ]
+    },
+    "CAELinux": {
+        "Based on": [
+            "Debian, Ubuntu (LTS)"
+        ],
+        "Origin": [
+            "Switzerland"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Live Medium, Scientific, Specialist"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "118 (92 hits per day)"
+        ]
+    },
+    "CRUX": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Sweden"
+        ],
+        "Architecture": [
+            "arm, x86_64"
+        ],
+        "Desktop": [
+            "Openbox"
+        ],
+        "Category": [
+            "Desktop, Raspberry Pi, Server, Source-based"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "117 (93 hits per day)"
+        ]
+    },
+    "Guix System": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Enlightenment, GNOME, LXDE, MATE, Xfce"
+        ],
+        "Category": [
+            "Education, Free Software, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "119 (91 hits per day)"
+        ]
+    },
+    "SolydXK": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Netherlands"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDE, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "120 (90 hits per day)"
+        ]
+    },
+    "Univention Corporate Server": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Germany"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "121 (88 hits per day)"
+        ]
+    },
+    "EuroLinux": {
+        "Based on": [
+            "Red Hat, Scientific"
+        ],
+        "Origin": [
+            "Poland"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOME, KDE Plasma"
+        ],
+        "Category": [
+            "Desktop, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "122 (86 hits per day)"
+        ]
+    },
+    "Whonix": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Germany"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Desktop, Privacy, Security"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "123 (85 hits per day)"
+        ]
+    },
+    "Project Trident": {
+        "Based on": [
+            "Void"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Lumina"
+        ],
+        "Category": [
+            "Desktop"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "124 (84 hits per day)"
+        ]
+    },
+    "BEE free": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "Indonesia"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "125 (83 hits per day)"
+        ]
+    },
+    "Linux From Scratch": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Canada"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "Fluxbox, Ice WM, KDE Plasma, LXDE, Openbox, Xfce"
+        ],
+        "Category": [
+            "Source-based, Education"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "126 (82 hits per day)"
+        ]
+    },
+    "OpenIndiana": {
+        "Based on": [
+            "Solaris, Open Solaris"
+        ],
+        "Origin": [
+            "United Kingdom"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "MATECategory"
+        ],
+        "OS Type": [
+            "Solaris Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "127 (82 hits per day)"
+        ]
+    },
+    "SUSE Linux Enterprise": {
+        "Based on": [
+            "open SUSEOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "armv7, armv8, IBM Z, Power, x86_64"
+        ],
+        "Desktop": [
+            "GNOME, Ice WMCategory"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "128 (82 hits per day)"
+        ]
+    },
+    "SuperGamer": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Gaming, Live Medium, Specialist"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "139 (72 hits per day)"
+        ]
+    },
+    "Swift Linux": {
+        "Based on": [
+            "Debian, MX Linux"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "129 (81 hits per day)"
+        ]
+    },
+    "AryaLinux": {
+        "Based on": [
+            "LFSOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOME, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Source-based"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "130 (79 hits per day)"
+        ]
+    },
+    "Clonezilla Live": {
+        "Based on": [
+            "Debian (Unstable)"
+        ],
+        "Origin": [
+            "Taiwan"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Data Rescue, Specialist"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "131 (79 hits per day)"
+        ]
+    },
+    "Debian Edu/Skolelinux": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Norway"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "GNOME, KDE, LXDE, LXQt, MATE, Xfce"
+        ],
+        "Category": [
+            "Desktop, Education, Thin Client"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "132 (79 hits per day)"
+        ]
+    },
+    "GoboLinux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Brazil"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Awesome"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Source-based"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "133 (79 hits per day)"
+        ]
+    },
+    "RISC OS": {
+        "OS Type": [
+            "Other OSBased on"
+        ],
+        "Origin": [
+            "United Kingdom"
+        ],
+        "Architecture": [
+            "armhf"
+        ],
+        "Desktop": [
+            "Pinboard"
+        ],
+        "Category": [
+            "Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "134 (79 hits per day)"
+        ]
+    },
+    "Finnix": {
+        "Based on": [
+            "Debian (Testing)"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Data Rescue, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "135 (77 hits per day)"
+        ]
+    },
+    "SliTaz GNU/Linux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Switzerland"
+        ],
+        "Architecture": [
+            "armel, i386, x86_64"
+        ],
+        "Desktop": [
+            "Openbox"
+        ],
+        "Category": [
+            "Desktop, From RAM, Live Medium, Old Computers, Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "136 (76 hits per day)"
+        ]
+    },
+    "Runtu": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "Russia"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Openbox, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Netbooks"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "138 (74 hits per day)"
+        ]
+    },
+    "Anarchy Installer": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Budgie, Cinnamon, GNOME, Xfce"
+        ],
+        "Category": [
+            "Desktop, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "137 (74 hits per day)"
+        ]
+    },
+    "Pardus": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Turkey"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOME, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "140 (71 hits per day)"
+        ]
+    },
+    "Star": {
+        "Based on": [
+            "Debian, Devuan"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Fluxbox, i3, JWM, Openbox"
+        ],
+        "Category": [
+            "Desktop"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "148 (65 hits per day)"
+        ]
+    },
+    "Live Raizo": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Fluxbox"
+        ],
+        "Category": [
+            "Live Medium, Specialist"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "141 (70 hits per day)"
+        ]
+    },
+    "NetBSD": {
+        "OS Type": [
+            "BSDBased on"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "acorn26, acorn32, alpha, amiga, arc, atari, cats, cobalt, dreamcast, emips, evbarm, evbmips, evbppc, evbsh3, ews4800mips, hp300, hp700, hpcarm, hpcmips, hpcsh, i386, ibmnws, luna68k, m68010, mipsco, mvme68k, mvmeppc, news68k, newsmips, ofppc, pmax, powerpc, prep, sandpoint, sgimips, shark, sparc32, sparc64, sun2, sun3, vax, x68k, x86_64, zaurus"
+        ],
+        "Desktop": [
+            "After Step, Awesome, Blackbox, Fluxbox, GNOME, Ice WM, KDE, Openbox, WMaker, Xfce"
+        ],
+        "Category": [
+            "Desktop, Raspberry Pi, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "143 (69 hits per day)"
+        ]
+    },
+    "T2 SDE": {
+        "Based on": [
+            "ROCKOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "mips64, powerpc, powerpc64, sparc64, x86, x86_64"
+        ],
+        "Desktop": [
+            "After Step, Awesome, Blackbox, Enlightenment, Fluxbox, GNOME, Ice WM, KDE, LXDE, Openbox, WMaker, Xfce"
+        ],
+        "Category": [
+            "Source-based"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "142 (70 hits per day)"
+        ]
+    },
+    "Lakka": {
+        "Based on": [
+            "Libre ELECOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "armhf, i386, x86_64"
+        ],
+        "Desktop": [
+            "Retro Arch"
+        ],
+        "Category": [
+            "Gaming, Multimedia, Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "144 (66 hits per day)"
+        ]
+    },
+    "Slax": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Czech Republic"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Fluxbox"
+        ],
+        "Category": [
+            "From RAM, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "145 (66 hits per day)"
+        ]
+    },
+    "APODIO": {
+        "Based on": [
+            "Debian, Ubuntu (LTS)"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "i386"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Multimedia, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "146 (65 hits per day)"
+        ]
+    },
+    "Snal Linux": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "i3"
+        ],
+        "Category": [
+            "Live Medium, Rescue"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "147 (65 hits per day)"
+        ]
+    },
+    "LibreELEC": {
+        "Based on": [
+            "Independent (forked from Open ELEC)"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "armhf, armv7, x86_64"
+        ],
+        "Desktop": [
+            "Kodi"
+        ],
+        "Category": [
+            "Multimedia, Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "149 (64 hits per day)"
+        ]
+    },
+    "Parabola GNU/Linux-libre": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "Chile"
+        ],
+        "Architecture": [
+            "armv7, i686, x86_64"
+        ],
+        "Desktop": [
+            "Blackbox, Fluxbox, GNOME, Ice WM, KDE, LXDE, MATE, Openbox, WMaker, Xfce"
+        ],
+        "Category": [
+            "Desktop, Free Software, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "150 (64 hits per day)"
+        ]
+    },
+    "BackBox Linux": {
+        "Based on": [
+            "Debian, Ubuntu (LTS)"
+        ],
+        "Origin": [
+            "Italy"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Data Rescue, Forensics, Security, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "151 (63 hits per day)"
+        ]
+    },
+    "PrimTux": {
+        "Based on": [
+            "Ubuntu, Debian (Stable)"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "armhf, i386, x86_64"
+        ],
+        "Desktop": [
+            "Fluxbox"
+        ],
+        "Category": [
+            "Desktop, Education, Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "152 (62 hits per day)"
+        ]
+    },
+    "Proxmox": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Austria"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Openbox"
+        ],
+        "Category": [
+            "Clusters, Server, Specialist"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "153 (62 hits per day)"
+        ]
+    },
+    "FuguIta": {
+        "OS Type": [
+            "BSDBased on"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "Fvwm"
+        ],
+        "Category": [
+            "Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "154 (60 hits per day)"
+        ]
+    },
+    "OpenMediaVault": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Germany"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "155 (59 hits per day)"
+        ]
+    },
+    "BSD Router Project": {
+        "OS Type": [
+            "BSDBased on"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Firewall, Router"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "156 (58 hits per day)"
+        ]
+    },
+    "Funtoo Linux": {
+        "Based on": [
+            "Gentoo"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "aarch64, armhf, i686, x86_64"
+        ],
+        "Desktop": [
+            "After Step, Blackbox, Cinnamon, Fluxbox, GNOME, Ice WM, KDE Plasma, LXDE, LXQt, Openbox, WMaker, Xfce"
+        ],
+        "Category": [
+            "Desktop, Server, Source-based"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "157 (58 hits per day)"
+        ]
+    },
+    "KolibriOS": {
+        "OS Type": [
+            "Other OSBased on"
+        ],
+        "Origin": [
+            "Russia"
+        ],
+        "Architecture": [
+            "i386"
+        ],
+        "Desktop": [
+            "Kolibri OSCategory"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "158 (58 hits per day)"
+        ]
+    },
+    "Exe GNU/Linux": {
+        "Based on": [
+            "Debian (Stable), Devuan"
+        ],
+        "Origin": [
+            "United Kingdom"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "Trinity"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "159 (57 hits per day)"
+        ]
+    },
+    "OPNsense": {
+        "OS Type": [
+            "BSDBased on"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "160 (57 hits per day)"
+        ]
+    },
+    "Grml": {
+        "Based on": [
+            "Debian (Testing)"
+        ],
+        "Origin": [
+            "Austria"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Fluxbox"
+        ],
+        "Category": [
+            "From RAM, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "161 (55 hits per day)"
+        ]
+    },
+    "OviOS Linux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Canada"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "162 (55 hits per day)"
+        ]
+    },
+    "Omarine": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Vietnam"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOME, KDE Plasma, LXDE, Xfce"
+        ],
+        "Category": [
+            "Desktop, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "163 (54 hits per day)"
+        ]
+    },
+    "openmamba GNU/Linux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Italy"
+        ],
+        "Architecture": [
+            "i586, x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma, LXQt"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Raspberry Pi, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "164 (53 hits per day)"
+        ]
+    },
+    "EasyNAS": {
+        "Based on": [
+            "open SUSEOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "165 (52 hits per day)"
+        ]
+    },
+    "NethServer": {
+        "Based on": [
+            "Cent OSOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "166 (52 hits per day)"
+        ]
+    },
+    "Karoshi": {
+        "Based on": [
+            "Debian, Ubuntu (LTS)"
+        ],
+        "Origin": [
+            "United Kingdom"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Education, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "167 (51 hits per day)"
+        ]
+    },
+    "Redcore Linux": {
+        "Based on": [
+            "Gentoo"
+        ],
+        "Origin": [
+            "Romania"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Source-based"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "168 (51 hits per day)"
+        ]
+    },
+    "Endian Firewall": {
+        "Based on": [
+            "Red Hat"
+        ],
+        "Origin": [
+            "Italy"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No desktop"
+        ],
+        "Category": [
+            "Firewall"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "169 (50 hits per day)"
+        ]
+    },
+    "Porteus Kiosk": {
+        "Based on": [
+            "Gentoo"
+        ],
+        "Origin": [
+            "Ireland"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Firefox"
+        ],
+        "Category": [
+            "Live Medium, Specialist"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "170 (49 hits per day)"
+        ]
+    },
+    "Untangle NG Firewall": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Firewall, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "172 (49 hits per day)"
+        ]
+    },
+    "FreeNAS": {
+        "OS Type": [
+            "BSDBased on"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "173 (48 hits per day)"
+        ]
+    },
+    "Hyperbola GNU/Linux-libre": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "Brazil"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "GNOME, LXDE, MATE, Xfce"
+        ],
+        "Category": [
+            "Desktop, Free Software, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "174 (48 hits per day)"
+        ]
+    },
+    "LinuxConsole": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "i586, x86_64"
+        ],
+        "Desktop": [
+            "MATECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "175 (48 hits per day)"
+        ]
+    },
+    "GALPon MiniNo": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Spain"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "LXDE, Openbox"
+        ],
+        "Category": [
+            "Live Medium, Netbooks, Old Computers"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "176 (48 hits per day)"
+        ]
+    },
+    "REMnux": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOMECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "171 (49 hits per day)"
+        ]
+    },
+    "Oracle Solaris": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "sparc64, x86_64"
+        ],
+        "Desktop": [
+            "After Step, GNOME, KDE, WMaker, Xfce"
+        ],
+        "Category": [
+            "Server, UNIX"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "177 (48 hits per day)"
+        ]
+    },
+    "3CX Phone System": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Cyprus"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No desktop"
+        ],
+        "Category": [
+            "Telephony"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "178 (47 hits per day)"
+        ]
+    },
+    "pfSense": {
+        "OS Type": [
+            "BSDBased on"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "179 (46 hits per day)"
+        ]
+    },
+    "ArchStrike": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Openbox"
+        ],
+        "Category": [
+            "Live Medium, Security"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "180 (45 hits per day)"
+        ]
+    },
+    "Pinguy OS": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "United Kingdom"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOMECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "181 (45 hits per day)"
+        ]
+    },
+    "KISS": {
+        "OS Type": [
+            "KISSBased on"
+        ],
+        "Origin": [
+            "Global"
+        ],
+        "Architecture": [
+            "aarch64, armv7, i686, x86_64"
+        ],
+        "Desktop": [
+            ""
+        ],
+        "Category": [
+            "Specialty"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "182 (44 hits per day)"
+        ]
+    },
+    "Smoothwall Express": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "United Kingdom"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "183 (44 hits per day)"
+        ]
+    },
+    "Wifislax": {
+        "Based on": [
+            "Slackware"
+        ],
+        "Origin": [
+            "Spain"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "184 (44 hits per day)"
+        ]
+    },
+    "Bedrock Linux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "aarch64, armv7, i386, mips64, ppc, ppc64, s390x, x86_64"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Specialist"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "185 (43 hits per day)"
+        ]
+    },
+    "OSMC": {
+        "Based on": [
+            "Debian (Stable), Raspbian"
+        ],
+        "Origin": [
+            "United Kingdom"
+        ],
+        "Architecture": [
+            "armhf, armv7"
+        ],
+        "Desktop": [
+            "Kodi"
+        ],
+        "Category": [
+            "Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "189 (42 hits per day)"
+        ]
+    },
+    "blackPanther OS": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Hungary"
+        ],
+        "Architecture": [
+            "i586"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "186 (43 hits per day)"
+        ]
+    },
+    "DietPi": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "United Kingdom"
+        ],
+        "Architecture": [
+            "armhf, x86_64"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "187 (42 hits per day)"
+        ]
+    },
+    "KANOTIX": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Germany"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "KDE, LXDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "188 (42 hits per day)"
+        ]
+    },
+    "RancherOS": {
+        "Based on": [
+            ""
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Docker, Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "191 (41 hits per day)"
+        ]
+    },
+    "AcademiX GNU/Linux": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Romania"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "MATECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "190 (41 hits per day)"
+        ]
+    },
+    "Bicom Systems": {
+        "Based on": [
+            "Gentoo"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "i386"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "192 (40 hits per day)"
+        ]
+    },
+    "BigLinux": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "Brazil"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma, LXQt"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "193 (40 hits per day)"
+        ]
+    },
+    "CAINE": {
+        "Based on": [
+            "Debian, Ubuntu (LTS)"
+        ],
+        "Origin": [
+            "Italy"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "MATECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "194 (40 hits per day)"
+        ]
+    },
+    "Kwort Linux": {
+        "Based on": [
+            "CRUXOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Openbox"
+        ],
+        "Category": [
+            "Desktop"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "195 (40 hits per day)"
+        ]
+    },
+    "Lunar Linux": {
+        "Based on": [
+            "Independent (forked from Sorcerer)"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i386, i686, x86_64"
+        ],
+        "Desktop": [
+            "Cinnamon, Fluxbox, GNOME, KDE, LXDE, Xfce"
+        ],
+        "Category": [
+            "Source-based"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "196 (40 hits per day)"
+        ]
+    },
+    "Trusted End Node Security": {
+        "Based on": [
+            "Thinstation"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "From RAM, Live Medium, Privacy, Security"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "197 (40 hits per day)"
+        ]
+    },
+    "ClonOS": {
+        "OS Type": [
+            "BSDBased on"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "198 (39 hits per day)"
+        ]
+    },
+    "Exherbo": {
+        "Based on": [
+            "Independent (forked from Gentoo)"
+        ],
+        "Origin": [
+            "Denmark"
+        ],
+        "Architecture": [
+            "armv7, i686, x86_64"
+        ],
+        "Desktop": [
+            "Awesome, Enlightenment, Fluxbox, GNOME, KDE, Openbox, Xfce"
+        ],
+        "Category": [
+            "Desktop, Server, Source-based"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "199 (39 hits per day)"
+        ]
+    },
+    "HardenedBSD": {
+        "OS Type": [
+            "BSDBased on"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Security"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "200 (39 hits per day)"
+        ]
+    },
+    "Pearl Linux OS": {
+        "Based on": [
+            "Ubuntu"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "MATE, Pearl DECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "201 (39 hits per day)"
+        ]
+    },
+    "Fatdog64 Linux": {
+        "Based on": [
+            "LFS (formerly based on Puppy)"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Openbox"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "202 (38 hits per day)"
+        ]
+    },
+    "Namib GNU/Linux": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "Canada"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Budgie, Cinnamon, GNOME, KDE Plasma, MATE, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "203 (37 hits per day)"
+        ]
+    },
+    "SuperX": {
+        "Based on": [
+            "Debian, Ubuntu (LTS)"
+        ],
+        "Origin": [
+            "India"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "204 (37 hits per day)"
+        ]
+    },
+    "Ufficio Zero": {
+        "Based on": [
+            "Debian, Devuan, Mint, PCLinux OSOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "MATE, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "205 (37 hits per day)"
+        ]
+    },
+    "batocera.linux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "armhf, i686, x86_64"
+        ],
+        "Desktop": [
+            "Openbox"
+        ],
+        "Category": [
+            "Gaming, Live Medium, Multimedia"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "206 (37 hits per day)"
+        ]
+    },
+    "BOSS GNU/Linux": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "India"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Cinnamon, GNOMECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "207 (36 hits per day)"
+        ]
+    },
+    "Dragora GNU/Linux-Libre": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Argentina"
+        ],
+        "Architecture": [
+            "i586, x86_64"
+        ],
+        "Desktop": [
+            "Ice WM, Scrotwm, Xfce"
+        ],
+        "Category": [
+            "Free Software"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "208 (36 hits per day)"
+        ]
+    },
+    "Pentoo": {
+        "Based on": [
+            "Gentoo"
+        ],
+        "Origin": [
+            "Switzerland"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Live Medium, Security"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "209 (36 hits per day)"
+        ]
+    },
+    "Vine Linux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Japan"
+        ],
+        "Architecture": [
+            "i686, powerpc, x86_64"
+        ],
+        "Desktop": [
+            "GNOMECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "210 (36 hits per day)"
+        ]
+    },
+    "XigmaNAS": {
+        "OS Type": [
+            "BSDBased on"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "211 (36 hits per day)"
+        ]
+    },
+    "Berry Linux": {
+        "Based on": [
+            "Fedora"
+        ],
+        "Origin": [
+            "Japan"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "LXDE, Maynard"
+        ],
+        "Category": [
+            "Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "212 (35 hits per day)"
+        ]
+    },
+    "Daphile": {
+        "Based on": [
+            "Gentoo"
+        ],
+        "Origin": [
+            "Finland"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "213 (35 hits per day)"
+        ]
+    },
+    "Linspire": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "214 (35 hits per day)"
+        ]
+    },
+    "Pisi Linux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Turkey"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Desktop"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "215 (35 hits per day)"
+        ]
+    },
+    "VyOS": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Global"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No desktop"
+        ],
+        "Category": [
+            "Firewall"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "216 (35 hits per day)"
+        ]
+    },
+    "LuninuX OS": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOMECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "217 (34 hits per day)"
+        ]
+    },
+    "Minimal Linux Live": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Bulgaria"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            ""
+        ],
+        "Category": [
+            "Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "218 (34 hits per day)"
+        ]
+    },
+    "Network Security Toolkit": {
+        "Based on": [
+            "Fedora"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Fluxbox, MATE, Openbox"
+        ],
+        "Category": [
+            "Live Medium, Security"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "219 (34 hits per day)"
+        ]
+    },
+    "RebeccaBlackOS": {
+        "Based on": [
+            "Debian (Testing)"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "Hawaii, KDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "220 (34 hits per day)"
+        ]
+    },
+    "Rescatux": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Spain"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "LXQt"
+        ],
+        "Category": [
+            "Data Rescue"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "221 (34 hits per day)"
+        ]
+    },
+    "Secure-K OS": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Italy"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOMECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "222 (34 hits per day)"
+        ]
+    },
+    "Zentyal Server": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "Spain"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "LXDE, Web UICategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "223 (34 hits per day)"
+        ]
+    },
+    "UBOS": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "armhf, x86_64"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Raspberry Pi, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "224 (33 hits per day)"
+        ]
+    },
+    "Cucumber Linux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Desktop, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "225 (32 hits per day)"
+        ]
+    },
+    "Greenie Linux": {
+        "Based on": [
+            "Debian, Ubuntu LTSOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "232 (31 hits per day)"
+        ]
+    },
+    "Photon OS": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "aarch64, x86_64"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Docker"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "226 (32 hits per day)"
+        ]
+    },
+    "Plop Linux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Austria"
+        ],
+        "Architecture": [
+            "armv6l, i486, x86_64"
+        ],
+        "Desktop": [
+            "Fluxbox, MATE, Xfce"
+        ],
+        "Category": [
+            "Data Rescue, Desktop, Live Medium, Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "227 (32 hits per day)"
+        ]
+    },
+    "SME Server": {
+        "Based on": [
+            "Fedora, Cent OSOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "228 (32 hits per day)"
+        ]
+    },
+    "Zeroshell": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Italy"
+        ],
+        "Architecture": [
+            "armhf, i386, x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "229 (32 hits per day)"
+        ]
+    },
+    "Asianux": {
+        "Based on": [
+            "Red Hat"
+        ],
+        "Origin": [
+            "China, Japan, South Korea"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOME, KDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "230 (31 hits per day)"
+        ]
+    },
+    "Freespire": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Desktop"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "231 (31 hits per day)"
+        ]
+    },
+    "LliureX": {
+        "Based on": [
+            "Debian, Ubuntu (LTS)"
+        ],
+        "Origin": [
+            "Spain"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "KDE Plasma"
+        ],
+        "Category": [
+            "Desktop, Education, Live Medium, Multimedia, Server, Thin Client"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "233 (31 hits per day)"
+        ]
+    },
+    "Plamo Linux": {
+        "Based on": [
+            "Slackware"
+        ],
+        "Origin": [
+            "Japan"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "LXDE, LXQt, MATE, Xfce"
+        ],
+        "Category": [
+            "Desktop, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "234 (31 hits per day)"
+        ]
+    },
+    "Recalbox": {
+        "Based on": [
+            ""
+        ],
+        "Origin": [
+            "Global"
+        ],
+        "Architecture": [
+            "armhf, i686, x86_64"
+        ],
+        "Desktop": [
+            ""
+        ],
+        "Category": [
+            "Gaming, Live Medium, Multimedia"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "235 (31 hits per day)"
+        ]
+    },
+    "Sophos UTM": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Germany"
+        ],
+        "Architecture": [
+            "i386"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "236 (31 hits per day)"
+        ]
+    },
+    "Source Mage GNU/Linux": {
+        "Based on": [
+            "Independent (forked from Sorcerer)"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i386, i486, i586, i686, x86_64"
+        ],
+        "Desktop": [
+            "After Step, Blackbox, Fluxbox, GNOME, i3, Ice WM, JWM, KDE, Openbox, Ratpoison, Razor-qt, WMaker, Xfce"
+        ],
+        "Category": [
+            "Desktop, Source-based"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "237 (31 hits per day)"
+        ]
+    },
+    "Springdale Linux": {
+        "Based on": [
+            "Fedora, Red Hat"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "GNOME, KDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "238 (31 hits per day)"
+        ]
+    },
+    "BlueOnyx": {
+        "Based on": [
+            "Cent OSOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "239 (30 hits per day)"
+        ]
+    },
+    "Elastix": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Ecuador"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "240 (30 hits per day)"
+        ]
+    },
+    "Refracta": {
+        "Based on": [
+            "Debian, Devuan"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "241 (30 hits per day)"
+        ]
+    },
+    "Rocks Cluster Distribution": {
+        "Based on": [
+            "Fedora, Cent OSOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOME, KDECategory"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "242 (30 hits per day)"
+        ]
+    },
+    "Super Grub2 Disk": {
+        "OS Type": [
+            "GRUBBased on"
+        ],
+        "Origin": [
+            "Spain"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            ""
+        ],
+        "Category": [
+            "Data Rescue, Live Medium, Specialist"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "243 (30 hits per day)"
+        ]
+    },
+    "Thinstation": {
+        "Based on": [
+            "CRUXOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Thin Client"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "244 (30 hits per day)"
+        ]
+    },
+    "Uruk GNU/Linux": {
+        "Based on": [
+            "Debian, Trisquel"
+        ],
+        "Origin": [
+            "Iraq"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "MATECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "248 (29 hits per day)"
+        ]
+    },
+    "DuZeru": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Brazil"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "245 (29 hits per day)"
+        ]
+    },
+    "ForLEx": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Italy"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "LXDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "246 (29 hits per day)"
+        ]
+    },
+    "FreedomBox": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Global"
+        ],
+        "Architecture": [
+            "armhf, i686, x86_64"
+        ],
+        "Desktop": [
+            "Web UICategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "247 (29 hits per day)"
+        ]
+    },
+    "Hanthana Linux": {
+        "Based on": [
+            "Fedora"
+        ],
+        "Origin": [
+            "Sri Lanka"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "LXDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "249 (28 hits per day)"
+        ]
+    },
+    "LinHES": {
+        "Based on": [
+            "Arch"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Enlightenment, WMaker"
+        ],
+        "Category": [
+            "Live Medium, Myth TV"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "250 (28 hits per day)"
+        ]
+    },
+    "NexentaStor": {
+        "Based on": [
+            "Solaris, Open Solaris, Debian, Ubuntu"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i386, x86_64"
+        ],
+        "Desktop": [
+            "No desktop"
+        ],
+        "Category": [
+            "Specialist, UNIX"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "251 (27 hits per day)"
+        ]
+    },
+    "PLD Linux Distribution": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Poland"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Blackbox, Fluxbox, GNOME, Ice WM, KDE, WMaker, Xfce"
+        ],
+        "Category": [
+            "Desktop, Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "252 (27 hits per day)"
+        ]
+    },
+    "ToOpPy Linux": {
+        "Based on": [
+            "Puppy"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "i686"
+        ],
+        "Desktop": [
+            "JWMCategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "253 (27 hits per day)"
+        ]
+    },
+    "TurnKey Linux": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "254 (27 hits per day)"
+        ]
+    },
+    "Zevenet": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Spain"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "255 (27 hits per day)"
+        ]
+    },
+    "paldo GNU/Linux": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Switzerland"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOME, Ice WM, Xfce"
+        ],
+        "Category": [
+            "Data Rescue, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "256 (27 hits per day)"
+        ]
+    },
+    "Baruwa Enterprise Edition": {
+        "Based on": [
+            "Fedora, Cent OSOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "257 (26 hits per day)"
+        ]
+    },
+    "FreePBX": {
+        "Based on": [
+            "Cent OSOrigin"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "258 (26 hits per day)"
+        ]
+    },
+    "HamoniKR": {
+        "Based on": [
+            "Debian, Mint"
+        ],
+        "Origin": [
+            "South Korea"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Cinnamon"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "259 (26 hits per day)"
+        ]
+    },
+    "OLPC OS": {
+        "Based on": [
+            "Fedora"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "i386"
+        ],
+        "Desktop": [
+            "GNOME, Sugar"
+        ],
+        "Category": [
+            "Education, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "260 (26 hits per day)"
+        ]
+    },
+    "Openwall GNU/*/Linux": {
+        "Based on": [
+            "Fedora"
+        ],
+        "Origin": [
+            "Global"
+        ],
+        "Architecture": [
+            "i586, i686, x86_64"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Server, Security"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "261 (26 hits per day)"
+        ]
+    },
+    "Pardus Topluluk": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Turkey"
+        ],
+        "Architecture": [
+            "armhf, x86_64"
+        ],
+        "Desktop": [
+            "GNOME, Xfce"
+        ],
+        "Category": [
+            "Desktop, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "262 (26 hits per day)"
+        ]
+    },
+    "Raspberry Slideshow": {
+        "Based on": [
+            "Raspbian"
+        ],
+        "Origin": [
+            "Italy"
+        ],
+        "Architecture": [
+            "armhf"
+        ],
+        "Desktop": [
+            "Omxplayer"
+        ],
+        "Category": [
+            "Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "263 (26 hits per day)"
+        ]
+    },
+    "SELKS": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "LXDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "264 (26 hits per day)"
+        ]
+    },
+    "Securepoint Security Suite": {
+        "Based on": [
+            "Independent"
+        ],
+        "Origin": [
+            "Germany"
+        ],
+        "Architecture": [
+            "i686"
+        ],
+        "Desktop": [
+            "No Desktop"
+        ],
+        "Category": [
+            "Firewall"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "265 (26 hits per day)"
+        ]
+    },
+    "Webconverger": {
+        "Based on": [
+            "Debian (Testing)"
+        ],
+        "Origin": [
+            "Singapore"
+        ],
+        "Architecture": [
+            "i686"
+        ],
+        "Desktop": [
+            "Firefox"
+        ],
+        "Category": [
+            "Live Medium, Specialist"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "266 (26 hits per day)"
+        ]
+    },
+    "YunoHost": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "France"
+        ],
+        "Architecture": [
+            "armhf, i686, x86_64"
+        ],
+        "Desktop": [
+            "No Desktop, Web UICategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "267 (26 hits per day)"
+        ]
+    },
+    "OB2D Linux": {
+        "Based on": [
+            "Debian (Testing)"
+        ],
+        "Origin": [
+            "Taiwan"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Server"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "268 (24 hits per day)"
+        ]
+    },
+    "OSGeoLive": {
+        "Based on": [
+            "Debian, Lubuntu (LTS)"
+        ],
+        "Origin": [
+            "USA"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "LXDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "269 (24 hits per day)"
+        ]
+    },
+    "ARMA aka Omoikane GNU/Linux": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Japan"
+        ],
+        "Architecture": [
+            "--"
+        ],
+        "Desktop": [
+            "GNOME, KDECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "270 (24 hits per day)"
+        ]
+    },
+    "Raspberry Digital Signage": {
+        "Based on": [
+            "Raspbian"
+        ],
+        "Origin": [
+            "Italy"
+        ],
+        "Architecture": [
+            "armhf"
+        ],
+        "Desktop": [
+            "Chromium"
+        ],
+        "Category": [
+            "Raspberry Pi"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "271 (24 hits per day)"
+        ]
+    },
+    "tuxtrans": {
+        "Based on": [
+            "Xubuntu, Debian"
+        ],
+        "Origin": [
+            "Austria"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "MATECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "272 (24 hits per day)"
+        ]
+    },
+    "DRBL Live": {
+        "Based on": [
+            "Debian"
+        ],
+        "Origin": [
+            "Taiwan"
+        ],
+        "Architecture": [
+            "i686, x86_64"
+        ],
+        "Desktop": [
+            "Xfce"
+        ],
+        "Category": [
+            "Specialist, Live Medium"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "273 (23 hits per day)"
+        ]
+    },
+    "Canaima GNU/Linux": {
+        "Based on": [
+            "Debian (Stable)"
+        ],
+        "Origin": [
+            "Venezuela"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOME, MATECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "274 (22 hits per day)"
+        ]
+    },
+    "Baltix GNU/Linux": {
+        "Based on": [
+            "Debian, Ubuntu"
+        ],
+        "Origin": [
+            "Lithuania"
+        ],
+        "Architecture": [
+            "x86_64"
+        ],
+        "Desktop": [
+            "GNOMECategory"
+        ],
+        "OS Type": [
+            "Linux Based on"
+        ],
+        "Status": [
+            "Active"
+        ],
+        "Popularity": [
+            "275 (7 hits per day)"
+        ]
+    }
+}
