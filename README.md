@@ -12,3 +12,6 @@ I scraped the top 275 distributions on [Distrowatch](https://distrowatch.com/) a
 I 'one-hot-encoded' the data and then classified it based on its' rating to perform a logistic regression. The model did better than chance, however the data that I used may not be the best.  This was just a little project I did because I just recently got into Linux. 
 
 Overall, I would have to say that (with the data I have) the specs of a distribution does not really correlate with what people think of it.
+
+## [Trulia House Prices](trulia)
+Scraped 2500 house prices from 5 cities in Missouri. I then cleaned the data and created a few graphs.  The R2 score from the linear regression performed was 0.72, however the MSE was huge.  Still a work in progress.
