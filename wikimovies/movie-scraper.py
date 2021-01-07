@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[11]:
-
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt 
@@ -18,22 +15,14 @@ import torch.nn as nn
 # %matplotlib inline # VSCode vs Jupyter Notebook
 plt.style.use(['dark_background'])
 
-
 # ## Scraping one movie
-
-# In[8]:
-
 
 dfs = pd.read_html('https://en.wikipedia.org/wiki/Escape_Room_(film)', encoding='utf-8')
 #dfs = pd.read_html('https://en.wikipedia.org/wiki/Godzilla:_King_of_the_Monsters_(2019_film)', encoding='utf-8')
 df = dfs[0]
 df
 
-
 # ## Getting rid of special characters (e.g. '\xa0')
-
-# In[9]:
-
 
 def clean_normalize_whitespace(x):
     if isinstance(x, str):
@@ -43,11 +32,7 @@ def clean_normalize_whitespace(x):
 
 df = df.applymap(clean_normalize_whitespace)
 
-
 # ### Replacement and setting header
-
-# In[10]:
-
 
 df.iloc[:, 1].replace(r'(\[\w\])', '', regex=True, inplace=True)
 df.iloc[:, 1].replace(r'\$', '', regex=True, inplace=True)
@@ -64,20 +49,12 @@ df.columns.name = None
 
 df.head()
 
-
 # ### Mapping words to numbers
-
-# In[11]:
-
 
 repl_dict = {'(T|t)housand': '*1e3', '(M|m)illion': '*1e6', '(B|b)illion': '*1e9'}
 df['box_office'] = df['box_office'].replace(repl_dict, regex=True).replace(r' ', '', regex=True).map(pd.eval)
 
-
 # ### Minimalist testing function
-
-# In[13]:
-
 
 def clean_minimal(df):
     df = df.applymap(clean_normalize_whitespace)
@@ -96,11 +73,7 @@ def clean_minimal(df):
 
     return df
 
-
 # ## Scraping Data from all Movies
-
-# In[14]:
-
 
 url = 'https://en.wikipedia.org/wiki/List_of_American_films_of_2019'
 r = requests.get(url)
@@ -116,10 +89,6 @@ def get_table(url):
     return df
 
 get_table('https://en.wikipedia.org/wiki/Escape_Room_(film)')
-
-
-# In[ ]:
-
 
 hrefs = soup.select('tr td i a')
 links = [href['href'] for href in hrefs]
@@ -138,30 +107,18 @@ for idx, link in enumerate(links):
     except Exception as e:
         print(str(e))
 
-
-# In[ ]:
-
-
 big_df = pd.concat(movie_data_list)
 # Remove last 3 irrelevant columns
 big_df = big_df.drop(big_df.columns[-3:], axis=1)
 # Save to csv
 big_df.to_csv('240-minus3.csv', index=False, header=big_df.columns.values)
 
-
 # ### Read back in the saved csv
-
-# In[5]:
-
 
 df = pd.read_csv('240-minus3.csv')
 df.head()
 
-
 # ### Function to clean whole datafrme
-
-# In[6]:
-
 
 repl_dict = {'(T|t)housand': '*1e3', '(M|m)illion': '*1e6', '(B|b)illion': '*1e9'}
 
@@ -204,11 +161,7 @@ def clean_table(df):
 df = clean_table(df)
 df.head()
 
-
 # ### Attempt to clean up `country`
-
-# In[7]:
-
 
 # df = pd.read_csv('240-minus3.csv')
 df['country'] = df['country'].fillna('NA')
@@ -241,25 +194,13 @@ df.loc[df['country'].str.contains('Zealand'), 'country'] = nz_list
 
 df['country']
 
-
 # ## Exploratory Data Analysis
-
-# In[9]:
-
 
 # df.to_csv('157-cleaned.csv', index=False, header=df.columns.values)
 
-
-# In[34]:
-
-
 df.info()
 
-
 # ### Budget vs Box office
-
-# In[73]:
-
 
 plt.figure(figsize=(10,6), dpi=300)
 plt.ticklabel_format(style='plain', axis='y')
@@ -267,10 +208,6 @@ plt.ticklabel_format(style='plain', axis='x')
 sns.scatterplot(x='budget', y='box_office', data=df, color='#d43d17', alpha=0.86, edgecolor='#547BCA')
 plt.xticks(rotation=-30)
 plt.title('Budget vs Box Office');
-
-
-# In[78]:
-
 
 plt.figure(figsize=(10,6), dpi=300)
 plt.ticklabel_format(style='plain', axis='y')
@@ -281,11 +218,7 @@ plt.title('Budget vs Box Office (Zoomed in)')
 plt.xlim(0, 125000000)
 plt.ylim(0, 500000000);
 
-
 # ### Running time vs Box office
-
-# In[76]:
-
 
 plt.figure(figsize=(10,6), dpi=300)
 plt.ticklabel_format(style='plain', axis='y')
@@ -293,10 +226,6 @@ plt.ticklabel_format(style='plain', axis='x')
 sns.scatterplot(x='running_time', y='box_office', data=df, color='#5FB97B', alpha=0.86, edgecolor='#72C9A6')
 plt.xticks(rotation=-30)
 plt.title('Running time vs Box Office');
-
-
-# In[81]:
-
 
 plt.figure(figsize=(10,6), dpi=300)
 plt.ticklabel_format(style='plain', axis='y')
@@ -307,11 +236,7 @@ plt.title('Running time vs Box Office (Zoomed in)')
 plt.xlim(80, 180)
 plt.ylim(0, 500000000);
 
-
 # ## Running time vs Budget
-
-# In[85]:
-
 
 plt.figure(figsize=(10,6), dpi=300)
 plt.ticklabel_format(style='plain', axis='y')
@@ -319,10 +244,6 @@ plt.ticklabel_format(style='plain', axis='x')
 sns.scatterplot(x='running_time', y='budget', data=df, color='#D4CF72', alpha=0.86, edgecolor='#D4A472')
 plt.xticks(rotation=-30)
 plt.title('Running time vs Budget');
-
-
-# In[90]:
-
 
 plt.figure(figsize=(10,6), dpi=300)
 plt.ticklabel_format(style='plain', axis='y')
@@ -333,11 +254,7 @@ plt.title('Running time vs Budget (Zommed in)')
 plt.xlim(80, 180)
 plt.ylim(0, 210000000);
 
-
 # ### Distributions
-
-# In[125]:
-
 
 plt.figure(figsize=(10,6), dpi=300)
 plt.ticklabel_format(style='plain', axis='x')
@@ -348,19 +265,11 @@ plt.xlabel('Dollar Amount (USD)')
 plt.title('Budget and Box Office Distribution')
 plt.legend();
 
-
-# In[142]:
-
-
 plt.figure(figsize=(10,6), dpi=300)
 plt.ticklabel_format(style='plain', axis='x')
 sns.histplot(df[['budget', 'box_office']], multiple='stack', bins=20, kde=False, palette='Dark2', legend=True, element='bars', stat='count')
 plt.xlabel('Dollar Amount (USD)')
 plt.title('Budget and Box Office Distribution');
-
-
-# In[153]:
-
 
 plt.figure(figsize=(10,6), dpi=300)
 plt.ticklabel_format(style='plain', axis='x')
@@ -369,11 +278,7 @@ plt.xlim(20000000, 600000000)
 plt.xlabel('Dollar Amount (USD)')
 plt.title('Budget and Box Office Distribution');
 
-
 # ## Machine Learning
-
-# In[18]:
-
 
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, r2_score
@@ -434,38 +339,22 @@ for epoch in range(num_epochs):
 print(f'Mean Squared Error: {mean_squared_error(y_test, predicted)}')
 print(f'R2 Score: {r2_score(y_test, predicted)*100:.3f}%')
 
-
-# In[20]:
-
-
 predicted = model(X_test).detach().numpy()
 plt.figure(figsize=(10, 6), dpi=300)
 plt.ticklabel_format(style='plain', axis='y')
 plt.plot(X_test, y_test, 'o', color='#5DB26D')
 plt.plot(X_test, predicted, color='#FD7878');
 
-
 # ## Turning into a Classification
-
-# In[29]:
-
 
 df = df[['title', 'release_date', 'running_time', 'budget', 'box_office']].copy()
 df.head()
-
-
-# In[34]:
-
 
 df['profit'] = 0
 df.loc[df['budget'] < df['box_office'], 'profit'] = 1
 df['profit'].value_counts()
 
-
 # ### Logistic Regression
-
-# In[56]:
-
 
 from sklearn.metrics import classification_report
 
@@ -519,10 +408,3 @@ with torch.no_grad():
     acc = y_pred_class.eq(y_test).sum() / float(y_test.shape[0])
     print(f'accuracy = {acc*100:.4f}%')
     print(f'\n Classification Report: {classification_report(y_test, y_pred_class)}')
-
-
-# In[ ]:
-
-
-
-

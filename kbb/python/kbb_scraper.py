@@ -1,17 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[119]:
-
-
 import requests
 from bs4 import BeautifulSoup as bs
 import csv
 import re
-
-
-# In[155]:
-
 
 def get_page(url):
     response = requests.get(url)
@@ -21,7 +14,6 @@ def get_page(url):
     else:
         soup = bs(response.text, 'lxml')
     return soup
-
 
 def get_data(soup):
     try:
@@ -52,7 +44,6 @@ def get_data(soup):
     
     return data_dict
 
-
 def get_index_data(soup):
     try:
         links = soup.find_all('a', attrs={'rel':'nofollow'})
@@ -64,10 +55,6 @@ def get_index_data(soup):
     full_urls = [f'https://www.kbb.com{url}' for url in actual][::2]
     
     return full_urls
-
-
-# In[183]:
-
 
 def write_csv(data):
     with open('kbb_scraper.csv', 'a') as csvfile:
@@ -94,19 +81,11 @@ def write_csv(data):
                     row = [data['Title']]
                     writer.writerow(row)
 
-
-# In[171]:
-
-
 url = 'https://www.kbb.com/cars-for-sale/all/?distance=75'
 get_index_data(get_page(url))
 
 url_records = [f'https://www.kbb.com/cars-for-sale/all/columbia-mo-65201?distance=75&dma=&channel=KBB&searchRadius=75&isNewSearch=false&marketExtension=include&showAccelerateBanner=false&sortBy=relevance&numRecords=25&firstRecord={x}' 
               for x in range(1000) if x % 25 == 0]
-
-
-# In[185]:
-
 
 url_records_test = url_records[::50]
 
@@ -122,16 +101,3 @@ for url in url_records:
             print(f'{idx} iteration complete')
             print(data)
             print('-----------------------------------------------------------')
-
-
-# In[186]:
-
-
-get_ipython().system('jupyter nbconvert --to script kbb-scraper.ipynb')
-
-
-# In[ ]:
-
-
-
-

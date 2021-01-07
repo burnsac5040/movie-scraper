@@ -1,8 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
 
 from bs4 import BeautifulSoup as bs
 import requests
@@ -14,10 +10,6 @@ import ssl
 import re
 import csv
 import datetime
-
-
-# In[33]:
-
 
 base_url = 'https://www.trulia.com'
 url = 'https://www.trulia.com/for_sale/Columbia,MO/1p_beds/SINGLE-FAMILY_HOME_type/'
@@ -43,12 +35,6 @@ ctx.verify_mode = ssl.CERT_NONE
 r = requests.get(url, headers=headers, verify=False)
 soup = bs(r.text, 'html.parser')
 
-
-# ## Single Search Page
-
-# In[3]:
-
-
 def get_page(url):
     """Returns a beautiful soup object."""
     r = requests.get(url, headers=headers, verify=False)
@@ -58,7 +44,6 @@ def get_page(url):
     else:
         soup = bs(r.text, 'html.parser')
     return soup
-
 
 def get_main_attrs(soup):
     """Gets the attributes of each listing from a search page and returns
@@ -90,7 +75,6 @@ def get_main_attrs(soup):
     df = pd.DataFrame(d).T.rename(columns={0:'region', 1:'new', 2:'price', 3:'bedrm', 4:'bth', 5:'sqft'})
     return df
 
-
 def get_urls(soup):
     """Gets the external URLs on the page."""
     hrefs = []
@@ -101,19 +85,9 @@ def get_urls(soup):
         
     return [base_url + x['href'] for x in hrefs]
 
-
-# ## Single Listing
-
-# In[4]:
-
-
 s_url = 'https://www.trulia.com/p/mo/columbia/2815-wild-plum-ct-columbia-mo-65201--2060813753'
 
 page = get_page(s_url)
-
-
-# In[5]:
-
 
 def get_page_attrs(soup):
     """Gets a single page's attributes and returns a dataframe."""
@@ -183,19 +157,9 @@ def get_page_attrs(soup):
 
     return df.rename(columns=dict(zip(df.columns.values, names)))
 
-
-# ## Using a Single Search page to Scrape 30 Listings
-
-# In[6]:
-
-
 spage = 'https://www.trulia.com/for_sale/Columbia,MO/1p_beds/SINGLE-FAMILY_HOME_type/2_p/'
 
 l_urls = get_urls(get_page(spage))
-
-
-# In[39]:
-
 
 dfs = []
 
@@ -204,22 +168,10 @@ for i, url in enumerate(l_urls):
     dfs.append(df)
     print(f'Listing {i:-<5} completed')
 
-
-# In[97]:
-
-
 df_main = get_main_attrs(get_page(spage)).rename_axis('addr').dropna(how='all')
 df_ind = pd.concat(dfs).set_index('addr').dropna(how='all')
 
-# df_main.join(df_ind, how='outer').dropna(how='all')
 pd.merge(df_main, df_ind, left_index=True, right_index=True).head(1)
-
-
-# ## Getting Main Attributes for Multiple Pages
-# - I got the ranges to use on the website by viewing the number of pages available
-
-# In[7]:
-
 
 from itertools import chain
 
@@ -234,10 +186,6 @@ all_urls = list(chain.from_iterable(list_all_urls))
 
 len(all_urls)
 
-
-# In[137]:
-
-
 all_main = []
 
 for i, url in enumerate(all_urls):
@@ -246,26 +194,10 @@ for i, url in enumerate(all_urls):
     if (i+1) % 5 == 0:
         print(f'URL {i+1:-<5} completed')
 
-
-# In[144]:
-
-
 df_main = pd.concat(all_main)
 df_main.sample(5)
-# df_main.to_csv('df_main.csv', index=True, columns=df_main.columns.values)
-
-
-# In[9]:
-
 
 df_main = pd.read_csv('df/df_main.csv', index_col=0)
-
-
-# ## Getting all of the individual listing's URLs
-# - I had to separate the two for loops (main page attributes/individual page attributes) because I kept getting blocked/captcha.
-
-# In[20]:
-
 
 ind_urls = []
 
@@ -276,10 +208,6 @@ for idx, url in enumerate(all_urls):
     if (idx+1) % 20 == 0:
         print(f'URL {idx+1:-<5} completed {urls[0][12:40]:-<5}')
 
-
-# In[23]:
-
-
 import pickle
 
 page_urls = list(chain.from_iterable(ind_urls))
@@ -288,10 +216,6 @@ with open('pickle/page_urls.pickle', 'wb') as f:
     pickle.dump(page_urls, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 len(page_urls)
-
-
-# In[81]:
-
 
 ind_dfs = []
 
@@ -303,24 +227,13 @@ for idx, url in enumerate(page_urls):
     if (idx+1) % 50 == 0:
         print(f'URL {idx+1:-<5}completed{url[28:40]:->15}')
 
-
-# In[126]:
-
-
-# Saving the list of dataframes
 with open('pickle/df_ind.pickle', 'wb') as f:
     pickle.dump(ind_dfs, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 with open('pickle/df_ind.pickle', 'rb') as f:
     ind_list = pickle.load(f)
 
-# Saving the concatenated dataframes
 df_ind = pd.concat(ind_dfs).replace('', np.nan).dropna(how='all').set_index('addr')
 df_ind.to_csv('df/df_ind.csv', index=True, columns=df_ind.columns.values)
 
-
-# In[71]:
-
-
 print(f'df_main: {df_main.shape}, df_ind: {df_ind.shape}')
-

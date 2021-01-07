@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 from bs4 import BeautifulSoup as bs
 import requests
 
@@ -15,17 +12,9 @@ import re
 import csv
 import datetime
 
-
 # ### Importing the Data
 
-# In[2]:
-
-
 os.listdir('df/21_tot/')
-
-
-# In[3]:
-
 
 df_main = pd.read_csv('df/df_main.csv', index_col=0)
 df_ind = pd.read_csv('df/df_ind.csv', index_col=0)
@@ -33,12 +22,7 @@ df_ind = pd.read_csv('df/df_ind.csv', index_col=0)
 df = pd.merge(df_main, df_ind, left_index=True, right_index=True)
 df.to_csv('df/df_tot.csv', index=True, columns=df.columns.values)
 
-
-# In[4]:
-
-
 df.sample(5)
-
 
 # ----
 # ### Region
@@ -51,7 +35,6 @@ df.sample(5)
 # 
 # Below is what I am reclassifying cities to be in line with the 5 cities above.
 # 
-# I looked each one up on Google.
 # 
 # ----
 
@@ -60,7 +43,6 @@ df.sample(5)
 # Parkville              28 = Kansas City
 # Florissant             20 = Saint Louis
 # Gladstone              13 = Kansas City
-# Independence           12 = Kansas City
 # Ashland                10 = Columbia
 # Riverside              10 = Kansas City
 # Nixa                   7 = Springfield
@@ -98,9 +80,6 @@ df.sample(5)
 # Blue Springs           1 = Kansas City
 # ```
 
-# In[5]:
-
-
 df['region'] = df['region'].replace(', MO', '', regex=True)
 
 # Other
@@ -124,19 +103,11 @@ df.loc[df['region'].str.contains('Ashland|Centralia|Fulton|Hallsville|New Bloomf
 
 df['region'] = df['region'].astype('category').cat.codes
 
-
-# In[6]:
-
-
 df['region'].value_counts()
-
 
 # ----
 # ### New, Price
 # ----
-
-# In[7]:
-
 
 df.loc[df['new'].str.contains('NEW|OWNER|COMING', na=False), 'new'] = 1
 df.loc[df['new'].str.contains('BANK|OPEN|AUCTION|OLD', na=False), 'new'] = 0
@@ -146,25 +117,17 @@ df['price'] = df['price'].replace(r'\$|,', '', regex=True)
 df['price'] = pd.to_numeric(df['price'].replace(r'\W', np.nan, regex=True), errors='coerce')
 df = df[df['price'].notnull()]
 
-
 # ----
 # ### Bedrooms, Bathrooms, Square Footage
 # ----
-
-# In[8]:
-
 
 df['bedrm'] = pd.to_numeric(df['bedrm'].replace(r'bd', '', regex=True))
 df['bth'] = pd.to_numeric(df['bth'].replace(r'ba|(\.\d)?', '', regex=True))
 df['sqft'] = pd.to_numeric(df['sqft'].replace(r'sqft|,', '', regex=True))
 
-
 # ----
 # ### Crime
 # ----
-
-# In[9]:
-
 
 df['crime'] = df['crime'].replace(r'Crime', '', regex=True) 
 # Some do not have a rating and instead have 'Learn about crime in this area'
@@ -174,27 +137,15 @@ df['crime'] = [x.split()[0] for x in df['crime']]
 # So I will replace 'Learn about crime...' with 'Low'
 df.loc[df['crime'].str.contains('Learn'), 'crime'] = 'Low'
 
-
-# In[10]:
-
-
 df['crime'].value_counts()
-
-
-# In[11]:
-
 
 crime_d = {'Lowest': 1, 'Low': 2, 'Moderate': 3, 'High': 4, 'Highest': 5}
 
 df['crime'] = df['crime'].map(crime_d)
 
-
 # ----
 # ### Schools
 # ----
-
-# In[12]:
-
 
 from textwrap import wrap
 
@@ -206,10 +157,6 @@ df['schools'] = df['schools'].replace(r'High (School)?', 'H', regex=True)
 
 school = [wrap(''.join(x.split()).strip(), 2) for x in df['schools']]
 school[0]
-
-
-# In[13]:
-
 
 for el in school:
     try: 
@@ -227,7 +174,6 @@ for el in school:
     except:
         el.insert(2, '0H')
 
-
 df['eschl'] = [x[0] for x in school]
 df['eschl'] = pd.to_numeric(df['eschl'].replace(r'E', '', regex=True))
 
@@ -238,7 +184,6 @@ df['hschl'] = [x[2] for x in school]
 df['hschl'] = pd.to_numeric(df['hschl'].replace(r'H', '', regex=True))
 
 df = df.drop('schools', axis=1)
-
 
 # ----
 # ### Details
@@ -273,9 +218,6 @@ df = df.drop('schools', axis=1)
 # 
 #   ----
 
-# In[14]:
-
-
 import ast
 from operator import itemgetter
 
@@ -289,10 +231,6 @@ details = [x for x in df['details_l']]
 len_ = [(len(x), idx) for idx, x in enumerate(details)]
 # Finding the largest list to possibly find more features
 max(len_, key=itemgetter(0))
-
-
-# In[15]:
-
 
 ### Basement ### 
 df['bsmnt'] = np.where(df['details'].str.contains('Basement', case=False), 1, 0)
@@ -391,13 +329,9 @@ df['pool'] = (df['details'].str.contains('Pool', case=False)).astype(int)
 
 df = df.drop(['details', 'details_l'], axis=1)
 
-
 # ----
 # ### Listing History
 # ----
-
-# In[16]:
-
 
 # df['list_hist'] = df['list_hist'].replace(r"[\[\]\'\,a-zA-JLN-Z]", '', regex=True).replace(r'(\d+\/\d+\/\d+)', '', regex=True)
 # df['list_hist'] = df['list_hist'].fillna(1).replace(r'\/', '', regex=True)
@@ -409,15 +343,11 @@ df['list_cnt'] = [str(x).count('$') for x in df['list_hist']]
 
 df = df.drop('list_hist', axis=1)
 
-
 # ----
 # ### Tax Assessment
 # - 1 if assessment is great than the price listing
 # 
 # ----
-
-# In[17]:
-
 
 df['tax'] = pd.to_numeric(df['tax'].replace(r"\[|\]|\'|,", '', regex=True).str.extract(r'(Assessment\$(\d*))')[1])
 df['tax'] = df['tax'].fillna(df['price'])
@@ -425,23 +355,14 @@ df['assess'] = (df['tax'] > df['price']).astype(int)
 
 df = df.drop('tax', axis=1)
 
-
 # ----
 # ### Typical Home Value of Similar Houses
 # ----
 
-# In[18]:
-
-
 df['typ_val'] = pd.to_numeric(df['typ_val'].replace(r'\D', '', regex=True))
 df['typ_val'] = df['typ_val'].fillna(df['price'])
 
-
-# In[19]:
-
-
 df['typ_val']
-
 
 # #### How Price of House relates to other Houses (above or below)
 # 
@@ -450,44 +371,24 @@ df['typ_val']
 # 
 # ################################################################################################################
 
-# In[20]:
-
-
 df['val_pct'] = [f'-{el}' if 'below' in el else el for el in df['val_pct']]
 df['val_pct'] = df['val_pct'].replace(r'above|below|%|,', '', regex=True).replace(r'[a-zA-Z]', '', regex=True)
 df['val_pct'] = [''.join(x.replace(' ', '')) for x in df['val_pct']]
 df['val_pct'] = pd.to_numeric(df['val_pct'])
 
-
 # ----
 # ### Typical Square Footage Price of Similar Houses
 # ----
 
-# In[21]:
-
-
 df['typ_sqft'] = pd.to_numeric(df['typ_sqft'].replace(r'\$|\D', '', regex=True))
 
-
 # #### How Price of a Square Foot relates to other Houses (above or below)
-
-# In[22]:
-
 
 df['sqft_pct'] = [f'-{el}' if 'below' in el else el for el in df['sqft_pct']]
 df['sqft_pct'] = df['sqft_pct'].replace(r'above|below|%|,', '', regex=True).replace(r'[a-zA-Z]', '', regex=True)
 df['sqft_pct'] = [''.join(x.replace(' ', '')) for x in df['sqft_pct']]
 df['sqft_pct'] = pd.to_numeric(df['sqft_pct'])
 
-
-# In[23]:
-
-
 df.info()
 
-
-# In[25]:
-
-
 df.to_csv('df_full.csv', index=True, columns=df.columns.values)
-
