@@ -4,7 +4,7 @@
 from bs4 import BeautifulSoup as bs
 import requests
 
-import numpy as np 
+import numpy as np
 import pandas as pd
 import time
 import ssl
@@ -13,8 +13,6 @@ import csv
 import datetime
 
 # ### Importing the Data
-
-os.listdir('df/21_tot/')
 
 df_main = pd.read_csv('df/df_main.csv', index_col=0)
 df_ind = pd.read_csv('df/df_ind.csv', index_col=0)
@@ -32,10 +30,10 @@ df.sample(5)
 # - Lees Summit
 # - Springfield
 # - Columbia
-# 
+#
 # Below is what I am reclassifying cities to be in line with the 5 cities above.
-# 
-# 
+#
+#
 # ----
 
 # ```
@@ -129,7 +127,7 @@ df['sqft'] = pd.to_numeric(df['sqft'].replace(r'sqft|,', '', regex=True))
 # ### Crime
 # ----
 
-df['crime'] = df['crime'].replace(r'Crime', '', regex=True) 
+df['crime'] = df['crime'].replace(r'Crime', '', regex=True)
 # Some do not have a rating and instead have 'Learn about crime in this area'
 print(df.loc[df['crime'].str.contains('Learn'), 'crime'][0])
 
@@ -159,17 +157,17 @@ school = [wrap(''.join(x.split()).strip(), 2) for x in df['schools']]
 school[0]
 
 for el in school:
-    try: 
+    try:
         re.search('E', ''.join(el)).group()
     except:
         el.insert(0, '0E')
 
-    try: 
+    try:
         re.search('M', ''.join(el)).group()
     except:
         el.insert(1, '0M')
 
-    try: 
+    try:
         re.search('H', ''.join(el)).group()
     except:
         el.insert(2, '0H')
@@ -187,7 +185,7 @@ df = df.drop('schools', axis=1)
 
 # ----
 # ### Details
-# 
+#
 # ```json
 # {
 #   "Basement": "boolean",
@@ -213,9 +211,9 @@ df = df.drop('schools', axis=1)
 #   "HOA Fee": "$400/monthly",
 #   "Security System": "bool"
 # }
-# 
+#
 #   ```
-# 
+#
 #   ----
 
 import ast
@@ -232,7 +230,7 @@ len_ = [(len(x), idx) for idx, x in enumerate(details)]
 # Finding the largest list to possibly find more features
 max(len_, key=itemgetter(0))
 
-### Basement ### 
+### Basement ###
 df['bsmnt'] = np.where(df['details'].str.contains('Basement', case=False), 1, 0)
 
 ### Heating ###
@@ -303,7 +301,7 @@ df['exterior'] = df['details'].str.extract('(Exterior:)\s(\w*)')[1].replace(r'Co
 df['exterior'] = df['exterior'].apply(lambda x: np.random.choice(df['exterior'].dropna().values) if pd.isna(x) else x).astype('category').cat.codes
 
 ### Foundation Type ###
-# df['details'].str.extract('(Foundation Type:)\s(\w*)')[1].value_counts() 
+# df['details'].str.extract('(Foundation Type:)\s(\w*)')[1].value_counts()
 
 ### Lot Size ###
 df['lot_sz'] = pd.to_numeric(df['details'].str.extract('(Lot Size:)\s(\w*)(\s?\w*)')[1]).fillna(df['sqft'])
@@ -324,7 +322,7 @@ df['hoa_fee'] = pd.to_numeric(df['details'].str.extract('(HOA Fee:)\s\$(\d*)')[1
 ### Security System ###
 df['sec_sys'] = (df['details'].str.contains('Security System', case=False)).astype(int)
 
-### Pool ### 
+### Pool ###
 df['pool'] = (df['details'].str.contains('Pool', case=False)).astype(int)
 
 df = df.drop(['details', 'details_l'], axis=1)
@@ -346,7 +344,7 @@ df = df.drop('list_hist', axis=1)
 # ----
 # ### Tax Assessment
 # - 1 if assessment is great than the price listing
-# 
+#
 # ----
 
 df['tax'] = pd.to_numeric(df['tax'].replace(r"\[|\]|\'|,", '', regex=True).str.extract(r'(Assessment\$(\d*))')[1])
@@ -365,10 +363,10 @@ df['typ_val'] = df['typ_val'].fillna(df['price'])
 df['typ_val']
 
 # #### How Price of House relates to other Houses (above or below)
-# 
+#
 # ################################################################################################################
 # - EITHER DROP THIS OR TYP_VAL
-# 
+#
 # ################################################################################################################
 
 df['val_pct'] = [f'-{el}' if 'below' in el else el for el in df['val_pct']]

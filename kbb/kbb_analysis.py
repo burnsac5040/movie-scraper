@@ -1,6 +1,19 @@
-#!/usr/bin/env python
-# coding: utf-8
+# ---
+# jupyter:
+#   jupytext:
+#     formats: ipynb,py
+#     text_representation:
+#       extension: .py
+#       format_name: light
+#       format_version: '1.5'
+#       jupytext_version: 1.9.1
+#   kernelspec:
+#     display_name: Python 3
+#     language: python
+#     name: python3
+# ---
 
+# +
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -12,7 +25,8 @@ import seaborn as sns
 
 plt.style.use(['dark_background'])
 # plt.rcParams['figure.dpi'] = 300
-get_ipython().run_line_magic('matplotlib', 'inline')
+# %matplotlib inline
+# -
 
 df = pd.read_csv('csv/kbb_scraper-2000.csv', header=None)
 df = df.drop_duplicates()
@@ -34,6 +48,7 @@ df.info()
 mask = np.column_stack([df[col].str.contains('MSRP', na=False) for col in df])
 df.loc[mask.any(axis=1)]
 
+# +
 df['mileage'] = df['mileage'].replace('\,', '', regex=True).replace(letters, '', regex=True)
 df['mileage'] = pd.to_numeric(df['mileage'])
 
@@ -41,18 +56,22 @@ df['price'] = df['price'].replace('\,', '', regex=True).replace(r'MSRP', '', reg
 df['price'] = pd.to_numeric(df['price'])
 
 df.info()
+# -
 
 # ### ===== mpg =====
 
+# + tags=[]
 # df['MPG (City)'] = df['']
 for item in df['mpg'][:10]:
     print(item.split('/'))
 
+# +
 df['mpg_city'] = [item.split('/')[0] for item in df['mpg']]
 df['mpg_highway'] = [item.split('/')[1] if len(item.split('/')) == 2 else item.split('/')[0] for item in df['mpg']]
 
 df['mpg_city'] = df['mpg_city'].str.replace('City', '').replace("'", '').map(lambda x: x.strip())
 df['mpg_highway'] = df['mpg_highway'].str.replace('Highway', '').replace("'", '').map(lambda x: x.strip())
+# -
 
 df['mpg_city'].unique()
 # df['MPG (City)'].value_counts()
@@ -64,6 +83,7 @@ df[df['mpg_city'].str.startswith('5')][:5]
 
 len(df.iloc[16]['mpg'])
 
+# +
 df.loc[df['mpg_city'].str.len() > 3, 'mpg_city'] = df['mpg_city'].str[0]
 df.loc[df['mpg_highway'].str.len() > 3, 'mpg_highway'] = df['mpg_highway'].str[-1]
 
@@ -72,6 +92,7 @@ df['mpg_highway'].replace(r'[a-zA-Z]', '0', regex=True, inplace=True)
 
 df['mpg_city'] = df['mpg_city'].astype(str).replace(r'[^0-9]', '0', regex=True)
 df['mpg_highway'] = df['mpg_highway'].astype(str).replace(r'[^0-9]', '0', regex=True)
+# -
 
 df['mpg_city'] = pd.to_numeric(df['mpg_city'])
 df['mpg_highway'] = pd.to_numeric(df['mpg_highway'])
@@ -129,10 +150,12 @@ df.head()
 
 # ### ===== year, make_model =====
 
+# +
 year = [item.split()[1] for item in df['title']]
 isnum = [s for s in year if s.isdigit()]
 
 len(year), len(isnum)
+# -
 
 df['year'] = [item.split()[1] for item in df['title']]
 df['year'] = pd.to_numeric(df['year'])
@@ -192,6 +215,7 @@ df.head()
 
 # ### ===== accident =====
 
+# +
 df.loc[(df['accident'].isna()) & (df['mileage'] < 500), 'accident'] = 'No Accident / Damage Reported'
 df.loc[(df['accident'].isna()) & (df['condition'] == 3), 'accident'] = 'No Accident / Damage Reported'
 df.loc[(df['accident'].isna()) & (df['condition'] == 2), 'accident'] = 'No Accident / Damage Reported'
@@ -200,12 +224,15 @@ df.loc[(df['accident'].isna()) & (df['price'] < 10000), 'accident'] = 'Accident 
 
 df = df.drop('owner', axis=1)
 df.head()
+# -
 
 df['accident'].value_counts()
 
+# +
 accident_dict = {'No Accident / Damage Reported': 1, 'Accident / Damage Reported': 0}
 
 df['accident'] = df['accident'].map(accident_dict)
+# -
 
 # ### ===== price_rating =====
 
@@ -246,11 +273,13 @@ df['turbo'] = [1 if item == 'Turbo' or item == 'Supercharged' else 0 for item in
 
 df['transmission'].value_counts()
 
+# +
 df['trans_#'] = df['transmission'].str.extract('(\d+)')
 df.loc[df['transmission'] == 'Single-Speed', 'trans_#'] = 1
 
 # NOT SURE ON THIS
 df.loc[df['trans_#'].isna(), 'trans_#'] = 0
+# -
 
 df['automatic'] = df['transmission'].str.contains('Automatic').astype(int)
 df.head()
@@ -271,7 +300,9 @@ df['color'].fillna('N/A', inplace=True)
 df['interior'].fillna('N/A', inplace=True)
 df.loc[df['interior'].str.contains('(\d+)', regex=True), 'interior'] = 'N/A'
 
+# +
 # [item.split() for item in df['interior']]
+# -
 
 df['interior'] = df['interior'].str.extract('(White|Black|Red|Orange|Yellow|Blue|Purple|Green|Silver|Burgundy|Gray|Grey|Brown|Pearl|Gold|Mocha|Nickel|Beige|Ingot|Tan|Tungsten|Granite|Metallic|Sandstone|Ebony|Adobe)')
 df['interior'].value_counts()
@@ -289,3 +320,5 @@ len(col1)
 
 df = df[cols]
 df.head()
+
+
