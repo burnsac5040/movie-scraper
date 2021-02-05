@@ -1,24 +1,32 @@
-#!/usr/bin/env python
-# coding: utf-8
+# ---
+# jupyter:
+#   jupytext:
+#     formats: ipynb,py
+#     text_representation:
+#       extension: .py
+#       format_name: light
+#       format_version: '1.5'
+#       jupytext_version: 1.9.1
+#   kernelspec:
+#     display_name: Python 3
+#     language: python
+#     name: python3
+# ---
 
-from bs4 import BeautifulSoup as bs
-import requests
-
-import numpy as np
+import numpy as np 
 import pandas as pd
 import time
-import ssl
 import re
-import csv
-import datetime
 
 # ### Importing the Data
 
+# +
 df_main = pd.read_csv('df/df_main.csv', index_col=0)
 df_ind = pd.read_csv('df/df_ind.csv', index_col=0)
 
 df = pd.merge(df_main, df_ind, left_index=True, right_index=True)
 df.to_csv('df/df_tot.csv', index=True, columns=df.columns.values)
+# -
 
 df.sample(5)
 
@@ -33,6 +41,7 @@ df.sample(5)
 #
 # Below is what I am reclassifying cities to be in line with the 5 cities above.
 #
+# I looked each one up on Google.
 #
 # ----
 
@@ -41,6 +50,7 @@ df.sample(5)
 # Parkville              28 = Kansas City
 # Florissant             20 = Saint Louis
 # Gladstone              13 = Kansas City
+# Independence           12 = Kansas City
 # Ashland                10 = Columbia
 # Riverside              10 = Kansas City
 # Nixa                   7 = Springfield
@@ -78,6 +88,7 @@ df.sample(5)
 # Blue Springs           1 = Kansas City
 # ```
 
+# +
 df['region'] = df['region'].replace(', MO', '', regex=True)
 
 # Other
@@ -99,7 +110,8 @@ df.loc[df['region'].str.contains('Nixa|Republic|Strafford|Brookline|Brighton|Fai
 df.loc[df['region'].str.contains('Columbia'), 'region'] = 'Columbia'
 df.loc[df['region'].str.contains('Ashland|Centralia|Fulton|Hallsville|New Bloomfield|California|Hartsburg|Auxvasse|Harrisburg|Rocheport|Kingdom City'), 'region'] = 'Columbia'
 
-df['region'] = df['region'].astype('category').cat.codes
+# df['region'] = df['region'].astype('category').cat.codes
+# -
 
 df['region'].value_counts()
 
@@ -107,6 +119,7 @@ df['region'].value_counts()
 # ### New, Price
 # ----
 
+# +
 df.loc[df['new'].str.contains('NEW|OWNER|COMING', na=False), 'new'] = 1
 df.loc[df['new'].str.contains('BANK|OPEN|AUCTION|OLD', na=False), 'new'] = 0
 df['new'] = pd.to_numeric(df['new'])
@@ -114,6 +127,7 @@ df['new'] = pd.to_numeric(df['new'])
 df['price'] = df['price'].replace(r'\$|,', '', regex=True)
 df['price'] = pd.to_numeric(df['price'].replace(r'\W', np.nan, regex=True), errors='coerce')
 df = df[df['price'].notnull()]
+# -
 
 # ----
 # ### Bedrooms, Bathrooms, Square Footage
@@ -127,24 +141,29 @@ df['sqft'] = pd.to_numeric(df['sqft'].replace(r'sqft|,', '', regex=True))
 # ### Crime
 # ----
 
-df['crime'] = df['crime'].replace(r'Crime', '', regex=True)
+# +
+df['crime'] = df['crime'].replace(r'Crime', '', regex=True) 
 # Some do not have a rating and instead have 'Learn about crime in this area'
 print(df.loc[df['crime'].str.contains('Learn'), 'crime'][0])
 
 df['crime'] = [x.split()[0] for x in df['crime']]
 # So I will replace 'Learn about crime...' with 'Low'
 df.loc[df['crime'].str.contains('Learn'), 'crime'] = 'Low'
+# -
 
 df['crime'].value_counts()
 
+# +
 crime_d = {'Lowest': 1, 'Low': 2, 'Moderate': 3, 'High': 4, 'Highest': 5}
 
 df['crime'] = df['crime'].map(crime_d)
+# -
 
 # ----
 # ### Schools
 # ----
 
+# +
 from textwrap import wrap
 
 df['schools'] = df['schools'].replace(r'Schools', ' ', regex=True)
@@ -156,21 +175,23 @@ df['schools'] = df['schools'].replace(r'High (School)?', 'H', regex=True)
 school = [wrap(''.join(x.split()).strip(), 2) for x in df['schools']]
 school[0]
 
+# + tags=[]
 for el in school:
-    try:
+    try: 
         re.search('E', ''.join(el)).group()
     except:
         el.insert(0, '0E')
 
-    try:
+    try: 
         re.search('M', ''.join(el)).group()
     except:
         el.insert(1, '0M')
 
-    try:
+    try: 
         re.search('H', ''.join(el)).group()
     except:
         el.insert(2, '0H')
+
 
 df['eschl'] = [x[0] for x in school]
 df['eschl'] = pd.to_numeric(df['eschl'].replace(r'E', '', regex=True))
@@ -182,6 +203,7 @@ df['hschl'] = [x[2] for x in school]
 df['hschl'] = pd.to_numeric(df['hschl'].replace(r'H', '', regex=True))
 
 df = df.drop('schools', axis=1)
+# -
 
 # ----
 # ### Details
@@ -216,6 +238,7 @@ df = df.drop('schools', axis=1)
 #
 #   ----
 
+# +
 import ast
 from operator import itemgetter
 
@@ -230,7 +253,8 @@ len_ = [(len(x), idx) for idx, x in enumerate(details)]
 # Finding the largest list to possibly find more features
 max(len_, key=itemgetter(0))
 
-### Basement ###
+# +
+### Basement ### 
 df['bsmnt'] = np.where(df['details'].str.contains('Basement', case=False), 1, 0)
 
 ### Heating ###
@@ -241,6 +265,7 @@ df['solar'] = np.where(df['details'].str.contains('Solar', case=False), 1, 0)
 
 ### Days on Market ###
 df['dayonmark'] = pd.to_numeric(df['details'].str.extract('(Days on Market:)\s(\d*)')[1])
+df['dayonmark'] = df['dayonmark'].fillna(1)
 
 ### Year Built ###
 df['yrbuilt'] = df['details'].str.extract('(Year Built:)\s(\d*)')[1]
@@ -301,10 +326,12 @@ df['exterior'] = df['details'].str.extract('(Exterior:)\s(\w*)')[1].replace(r'Co
 df['exterior'] = df['exterior'].apply(lambda x: np.random.choice(df['exterior'].dropna().values) if pd.isna(x) else x).astype('category').cat.codes
 
 ### Foundation Type ###
-# df['details'].str.extract('(Foundation Type:)\s(\w*)')[1].value_counts()
+# df['details'].str.extract('(Foundation Type:)\s(\w*)')[1].value_counts() 
 
 ### Lot Size ###
 df['lot_sz'] = pd.to_numeric(df['details'].str.extract('(Lot Size:)\s(\w*)(\s?\w*)')[1]).fillna(df['sqft'])
+# df['lot_sz'] = np.where(df['lot_sz'] == 0, df['sqft'], df['lot_sz'])
+df['lot_sz'][df['lot_sz'] == 0] = df['sqft']
 
 ### Parking Spaces ###
 df['prk_spc'] = df['details'].str.extract('(Parking Spaces:)\s(\w*)')[1].astype(float)
@@ -322,15 +349,17 @@ df['hoa_fee'] = pd.to_numeric(df['details'].str.extract('(HOA Fee:)\s\$(\d*)')[1
 ### Security System ###
 df['sec_sys'] = (df['details'].str.contains('Security System', case=False)).astype(int)
 
-### Pool ###
+### Pool ### 
 df['pool'] = (df['details'].str.contains('Pool', case=False)).astype(int)
 
 df = df.drop(['details', 'details_l'], axis=1)
+# -
 
 # ----
 # ### Listing History
 # ----
 
+# +
 # df['list_hist'] = df['list_hist'].replace(r"[\[\]\'\,a-zA-JLN-Z]", '', regex=True).replace(r'(\d+\/\d+\/\d+)', '', regex=True)
 # df['list_hist'] = df['list_hist'].fillna(1).replace(r'\/', '', regex=True)
 # df['list_cnt'] = [str(l).strip().split() for l in df['list_hist']]
@@ -340,18 +369,21 @@ df['list_hist'] = df['list_hist'].fillna(1)
 df['list_cnt'] = [str(x).count('$') for x in df['list_hist']]
 
 df = df.drop('list_hist', axis=1)
+# -
 
 # ----
 # ### Tax Assessment
-# - 1 if assessment is great than the price listing
+# - 1 if assessment is greater than the price listing
 #
 # ----
 
+# +
 df['tax'] = pd.to_numeric(df['tax'].replace(r"\[|\]|\'|,", '', regex=True).str.extract(r'(Assessment\$(\d*))')[1])
 df['tax'] = df['tax'].fillna(df['price'])
 df['assess'] = (df['tax'] > df['price']).astype(int)
 
 df = df.drop('tax', axis=1)
+# -
 
 # ----
 # ### Typical Home Value of Similar Houses
@@ -369,24 +401,51 @@ df['typ_val']
 #
 # ################################################################################################################
 
+# + tags=[]
 df['val_pct'] = [f'-{el}' if 'below' in el else el for el in df['val_pct']]
 df['val_pct'] = df['val_pct'].replace(r'above|below|%|,', '', regex=True).replace(r'[a-zA-Z]', '', regex=True)
 df['val_pct'] = [''.join(x.replace(' ', '')) for x in df['val_pct']]
+
 df['val_pct'] = pd.to_numeric(df['val_pct'])
+
+df.loc[(df['val_pct'].isna()) & (df['price'].lt(100000)), 'val_pct'] = df.loc[(df['price'].lt(100000)), 'val_pct'].mean()
+df.loc[(df['val_pct'].isna()) & (df['price'].between(100000, 200000)), 'val_pct'] = df.loc[(df['price'].between(100000, 200000)), 'val_pct'].mean()
+df.loc[(df['val_pct'].isna()) & (df['price'].between(200000, 300000)), 'val_pct'] = df.loc[(df['price'].between(200000, 300000)), 'val_pct'].mean()
+df.loc[(df['val_pct'].isna()) & (df['price'].between(300000, 400000)), 'val_pct'] = df.loc[(df['price'].between(300000, 400000)), 'val_pct'].mean()
+df.loc[(df['val_pct'].isna()) & (df['price'].gt(400000)), 'val_pct'] = df.loc[(df['price'].gt(400000)), 'val_pct'].mean()
+# -
 
 # ----
 # ### Typical Square Footage Price of Similar Houses
 # ----
 
+# +
 df['typ_sqft'] = pd.to_numeric(df['typ_sqft'].replace(r'\$|\D', '', regex=True))
 
-# #### How Price of a Square Foot relates to other Houses (above or below)
+df.loc[(df['typ_sqft'].isna()) & (df['sqft'].lt(1000)), 'typ_sqft'] =  df.loc[df['sqft'].lt(1000), 'sqft'].mean()
+df.loc[(df['typ_sqft'].isna()) & (df['sqft'].between(1000, 2000)), 'typ_sqft'] =  df.loc[df['sqft'].between(1000, 2000), 'sqft'].mean()
+df.loc[(df['typ_sqft'].isna()) & (df['sqft'].between(2000, 3000)), 'typ_sqft'] =  df.loc[df['sqft'].between(2000, 3000), 'sqft'].mean()
+# -
 
+# #### How Price of a Square Foot relates to other Houses (above or below)
+#
+# ################################################################################################################
+# - EITHER DROP THIS OR TYP_SQFT
+#
+# ################################################################################################################
+
+# +
 df['sqft_pct'] = [f'-{el}' if 'below' in el else el for el in df['sqft_pct']]
 df['sqft_pct'] = df['sqft_pct'].replace(r'above|below|%|,', '', regex=True).replace(r'[a-zA-Z]', '', regex=True)
 df['sqft_pct'] = [''.join(x.replace(' ', '')) for x in df['sqft_pct']]
+
 df['sqft_pct'] = pd.to_numeric(df['sqft_pct'])
+
+df.loc[(df['sqft_pct'].isna()) & (df['price'].lt(100000)), 'sqft_pct'] = df.loc[df['sqft_pct'].lt(100000), 'sqft_pct'].mean()
+df.loc[(df['sqft_pct'].isna()) & (df['price'].between(100000, 300000)), 'sqft_pct'] = df.loc[df['sqft_pct'].between(100000, 300000), 'sqft_pct'].mean()
+# -
 
 df.info()
 
-df.to_csv('df_full.csv', index=True, columns=df.columns.values)
+df = df.drop_duplicates()
+df.to_csv('df/df_full.csv', index=True, columns=df.columns.values)

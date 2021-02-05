@@ -1,6 +1,20 @@
-#!/usr/bin/env python
-# coding: utf-8
+# -*- coding: utf-8 -*-
+# ---
+# jupyter:
+#   jupytext:
+#     formats: ipynb,py
+#     text_representation:
+#       extension: .py
+#       format_name: light
+#       format_version: '1.5'
+#       jupytext_version: 1.9.1
+#   kernelspec:
+#     display_name: Python 3
+#     language: python
+#     name: python3
+# ---
 
+# +
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt 
@@ -12,8 +26,9 @@ from unicodedata import normalize
 import torch
 import torch.nn as nn
 
-# %matplotlib inline # VSCode vs Jupyter Notebook
+# # %matplotlib inline # VSCode vs Jupyter Notebook
 plt.style.use(['dark_background'])
+# -
 
 # ## Scraping one movie
 
@@ -22,8 +37,10 @@ dfs = pd.read_html('https://en.wikipedia.org/wiki/Escape_Room_(film)', encoding=
 df = dfs[0]
 df
 
+
 # ## Getting rid of special characters (e.g. '\xa0')
 
+# +
 def clean_normalize_whitespace(x):
     if isinstance(x, str):
         return normalize('NFKC', x).strip()
@@ -31,9 +48,11 @@ def clean_normalize_whitespace(x):
         return x
 
 df = df.applymap(clean_normalize_whitespace)
+# -
 
 # ### Replacement and setting header
 
+# +
 df.iloc[:, 1].replace(r'(\[\w\])', '', regex=True, inplace=True)
 df.iloc[:, 1].replace(r'\$', '', regex=True, inplace=True)
 header = df.T.iloc[0]
@@ -48,11 +67,13 @@ df.drop(list(df.filter(regex='poster')), axis=1, inplace=True, errors='ignore')
 df.columns.name = None
 
 df.head()
+# -
 
 # ### Mapping words to numbers
 
 repl_dict = {'(T|t)housand': '*1e3', '(M|m)illion': '*1e6', '(B|b)illion': '*1e9'}
 df['box_office'] = df['box_office'].replace(repl_dict, regex=True).replace(r' ', '', regex=True).map(pd.eval)
+
 
 # ### Minimalist testing function
 
@@ -73,8 +94,10 @@ def clean_minimal(df):
 
     return df
 
+
 # ## Scraping Data from all Movies
 
+# +
 url = 'https://en.wikipedia.org/wiki/List_of_American_films_of_2019'
 r = requests.get(url)
 soup = bs(r.text, 'html.parser')
@@ -90,6 +113,7 @@ def get_table(url):
 
 get_table('https://en.wikipedia.org/wiki/Escape_Room_(film)')
 
+# +
 hrefs = soup.select('tr td i a')
 links = [href['href'] for href in hrefs]
 base_path = 'https://en.wikipedia.org/'
@@ -106,6 +130,7 @@ for idx, link in enumerate(links):
         
     except Exception as e:
         print(str(e))
+# -
 
 big_df = pd.concat(movie_data_list)
 # Remove last 3 irrelevant columns
@@ -120,6 +145,7 @@ df.head()
 
 # ### Function to clean whole datafrme
 
+# +
 repl_dict = {'(T|t)housand': '*1e3', '(M|m)illion': '*1e6', '(B|b)illion': '*1e9'}
 
 def clean_table(df):
@@ -160,9 +186,11 @@ def clean_table(df):
 
 df = clean_table(df)
 df.head()
+# -
 
 # ### Attempt to clean up `country`
 
+# +
 # df = pd.read_csv('240-minus3.csv')
 df['country'] = df['country'].fillna('NA')
 # Split based on capital letters
@@ -193,10 +221,13 @@ df.loc[df['country'].str.contains('Czech'), 'country'] = cr_list
 df.loc[df['country'].str.contains('Zealand'), 'country'] = nz_list
 
 df['country']
+# -
 
 # ## Exploratory Data Analysis
 
+# +
 # df.to_csv('157-cleaned.csv', index=False, header=df.columns.values)
+# -
 
 df.info()
 
@@ -280,6 +311,7 @@ plt.title('Budget and Box Office Distribution');
 
 # ## Machine Learning
 
+# +
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
@@ -338,12 +370,14 @@ for epoch in range(num_epochs):
 
 print(f'Mean Squared Error: {mean_squared_error(y_test, predicted)}')
 print(f'R2 Score: {r2_score(y_test, predicted)*100:.3f}%')
+# -
 
 predicted = model(X_test).detach().numpy()
 plt.figure(figsize=(10, 6), dpi=300)
 plt.ticklabel_format(style='plain', axis='y')
 plt.plot(X_test, y_test, 'o', color='#5DB26D')
 plt.plot(X_test, predicted, color='#FD7878');
+
 
 # ## Turning into a Classification
 
@@ -354,8 +388,10 @@ df['profit'] = 0
 df.loc[df['budget'] < df['box_office'], 'profit'] = 1
 df['profit'].value_counts()
 
+
 # ### Logistic Regression
 
+# +
 from sklearn.metrics import classification_report
 
 X, y = np.array(df[['running_time', 'budget']]), np.array(df['profit'])
@@ -408,3 +444,7 @@ with torch.no_grad():
     acc = y_pred_class.eq(y_test).sum() / float(y_test.shape[0])
     print(f'accuracy = {acc*100:.4f}%')
     print(f'\n Classification Report: {classification_report(y_test, y_pred_class)}')
+
+# -
+
+

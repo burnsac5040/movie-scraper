@@ -1,5 +1,17 @@
-#!/usr/bin/env python
-# coding: utf-8
+# ---
+# jupyter:
+#   jupytext:
+#     formats: ipynb,py
+#     text_representation:
+#       extension: .py
+#       format_name: light
+#       format_version: '1.5'
+#       jupytext_version: 1.9.1
+#   kernelspec:
+#     display_name: Python 3
+#     language: python
+#     name: python3
+# ---
 
 # ----
 # ----
@@ -7,18 +19,21 @@
 # ----
 # ----
 
+# +
 import pandas as pd
 import numpy as np 
 import matplotlib.pyplot as plt 
 import seaborn as sns
 
-# %matplotlib inline # (VSCode doesn't need this)
+# # %matplotlib inline # (VSCode doesn't need this)
 plt.style.use(['dark_background'])
 plt.rcParams['figure.dpi'] = 300
+# -
 
 df = pd.read_csv('data/df-ohe.csv', index_col=0).sample(frac=1)
 df
 
+# +
 fig, axes = plt.subplots(2, 2, sharex=True, sharey=True)
 plt.yticks(np.arange(0, 4001, 1000))
 
@@ -31,13 +46,16 @@ for i, col in enumerate(cols):
     axes[i].set(title=col)
 
 plt.tight_layout()
+# -
 
 # ### Distribution of Ratings
 
+# +
 df['rating_bin'] = pd.cut(df['rating'], bins=np.arange(0, 11), right=True)
 
 sns.countplot(df['rating_bin']);
 
+# +
 fig, axes = plt.subplots(2, 2, sharex=True)
 
 axes = axes.ravel()
@@ -51,9 +69,11 @@ for i, col in enumerate(cols):
 
 fig.suptitle('Average Page Views per Bin vs Rating')
 plt.tight_layout()
+# -
 
 df.loc[df['rating_bin'].apply(lambda x: x.overlaps(pd.Interval(8, 9))), '1_month']
 
+# +
 from collections import defaultdict
 
 inter = np.arange(0, 11)
@@ -77,9 +97,11 @@ for mb, v in min.items():
     min_d[m][b.strip()] = v
 
 max_d['1_month']['(0, 1)']
+# -
 
 max_d
 
+# +
 # sns.barplot(x=list(max_d['1_month'].keys()), y=list(max_d['1_month'].values()))
 
 fig, axes = plt.subplots(2, 2, sharex=True)
@@ -96,11 +118,13 @@ for i, col in enumerate(max_d.keys()):
 
 fig.suptitle('Max Page Views per Bin vs Rating')
 plt.tight_layout()
+# -
 
 # ## Machine Learning
 
 df.head()
 
+# +
 # df['fav'] = np.where((df['rating'] > 7) & (df['ranks'] < 85), 1, 0)
 
 df['fav'] = np.where(df['rating'] > 8.5, 1, 0)
@@ -117,9 +141,11 @@ X_train = df.iloc[x_train_indices, 1:-1]
 X_test = df.iloc[x_test_indices, 1:-1]
 y_train = df.iloc[x_train_indices, -1]
 y_test = df.iloc[x_test_indices, -1]
+# -
 
 print('X_train: %s, X_test: %s \n y_train: %s, y_test: %s' % (X_train.shape, X_test.shape, y_train.shape, y_test.shape))
 
+# +
 from sklearn.preprocessing import StandardScaler
 
 ss = StandardScaler()
@@ -127,6 +153,8 @@ ss.fit(X_train)
 X_train = ss.transform(X_train)
 X_test = ss.transform(X_test)
 
+
+# +
 # Will attempt to do this manually at some point
 def col_mean(df):
     rows, cols = df.shape
@@ -142,6 +170,8 @@ def col_std(df, col_means):
         stds[i] = ((df.iloc[:, i].values - means[i])**2).sum()
     return [np.sqrt(el/rows-1) for el in stds]
 
+
+# +
 from timeit import default_timer as t
 
 class LogisticRegression:
@@ -179,22 +209,28 @@ class LogisticRegression:
         clss = probs >= threshold
         return probs, clss
 
+
+# +
 np.random.seed(5040)
 
 lr = LogisticRegression(n_iters=10000, bias=True)
 lr.fit(X_train, y_train)
 probs, pred = lr.predict_proba(X_test)
 
+
+# +
 def accuracy(y_true, y_pred):
     acc = np.sum(y_true == y_pred) / len(y_true)
     return round(acc, 3)
 
 print(f'Accuracy: {accuracy(y_test, pred)}\nClass 1 count: {y_test.sum()} Class 0 count: {y_test.size - y_test.sum()}')
+# -
 
 # ----
 # ### Dataframe of Probabilities and Thresholds
 # ----
 
+# +
 thresh_df = pd.DataFrame(probs, columns=['probs'])
 thresh_df['true'] = y_test.tolist()
 
@@ -202,7 +238,7 @@ for i in np.arange(.10, 1, .05):
     thresh_df[f'thresh_{i:.2f}'] = np.where(thresh_df['probs']>=i, 1, 0)
 
 thresh_df.head()
+# -
 
 for col in thresh_df.iloc[:, 2:]:
     print(f'{col}: {thresh_df[thresh_df[col] == 1].shape[0]}/{y_test.sum()}')
-
