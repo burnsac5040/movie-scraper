@@ -15,10 +15,10 @@
 
 # +
 import requests
-from bs4 import BeautifulSoup as bs 
+from bs4 import BeautifulSoup as bs
 
-import numpy as np 
-import pandas as pd 
+import numpy as np
+import pandas as pd
 import time, re, json, pickle
 
 # +
@@ -207,13 +207,13 @@ def get_os_info_full(text):
         b = re.search(r'\b(Based on):', t).span()[0]
     except:
         b = None
-    
+
     try:
         c = re.search(r'\b(Origin):', t).span()[0]
     except:
         c = None
 
-    try: 
+    try:
         d = re.search(r'\b(Architecture):', t).span()[0]
     except:
         d = None
@@ -222,7 +222,7 @@ def get_os_info_full(text):
         e = re.search(r'\b(Desktop):', t).span()[0]
     except:
         e = None
-    
+
     try:
         f = re.search(r'\b(Category):', t).span()[0]
     except:
@@ -309,9 +309,6 @@ def get_distro(soup):
 
     full_d.update(temp_d)
     return temp_d
-
-
-
 # -
 
 # ### Testing on small sample
@@ -440,7 +437,7 @@ print(count)
 print(idxs)
 
 # +
-full_df = pd.concat([el.T for el in df_list], 
+full_df = pd.concat([el.T for el in df_list],
                     keys=[el for el in ranked_hrefs], axis=0).reset_index(level=1, drop=True)
 
 full_df.index.name = 'distro'
@@ -671,7 +668,7 @@ i_release.sample(2)
 
 # ----
 # ### Based On:
-# Most common: Fedora, Red Hat, Debian, Ubuntu, Independent, Arch (pacman), Gentoo, Slackware 
+# Most common: Fedora, Red Hat, Debian, Ubuntu, Independent, Arch (pacman), Gentoo, Slackware
 #
 # ----
 
