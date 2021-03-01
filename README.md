@@ -28,3 +28,6 @@ Overall, I would have to say that (with the data I have) the specs of a distribu
 -----------------------
 ### [Trulia House Prices](trulia)
 Scraped 2500 house prices from 5 cities in Missouri. I then cleaned the data and created a few graphs.  The R2 score from the linear regression performed was 0.72, however the MSE was huge. A better selection of the data needs to be done to work with a linear regression model.
+
+### Slashdot
+Scraping posts on slashdot to perform a sentiment analysis.
