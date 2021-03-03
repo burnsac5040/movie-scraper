@@ -1,4 +1,14 @@
-### added dataframe & testing stagit recompile (HEAD -> master)
+### furthing slashdot (HEAD -> master)
+>Wed, 3 Mar 2021 10:52:22 -0600
+
+>Author: Lucas Burns (burnsac@me.com)
+
+>Commiter: Lucas Burns (burnsac@me.com)
+
+
+
+
+### added dataframe & testing stagit recompile (home/master, gitlab/master)
 >Sun, 28 Feb 2021 19:32:01 -0600
 
 >Author: Lucas Burns (burnsac@me.com)
@@ -8,7 +18,7 @@
 
 
 
-### updated (origin/master, home/master, gitlab/master)
+### updated (origin/master)
 >Sun, 28 Feb 2021 18:47:03 -0600
 
 >Author: Lucas Burns (burnsac@me.com)

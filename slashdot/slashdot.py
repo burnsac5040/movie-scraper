@@ -133,6 +133,7 @@ df["exlink"] = df["exlink"] | px.str.replace(r"\(|\)", "", regex=True)
 # +
 import time
 
+
 def get_page(url, sleep=False, prnt=False):
     response = requests.get(url)
     if not response.ok:
@@ -240,7 +241,7 @@ data = [get_data(get_page(x, sleep=True, prnt=True)) for x in urls] | p(pd.conca
 
 data = data.reset_index(drop=True)
 
-data.to_csv(f'df-{date.today().strftime("%m%d%Y")}.csv',
+data.to_csv(f'data/df-{date.today().strftime("%m%d%Y")}.csv',
             index=True, columns=data.columns.values)
 # -
 
@@ -250,7 +251,8 @@ data.to_csv(f'df-{date.today().strftime("%m%d%Y")}.csv',
 # ### └─────────────────────────────────────────────────┘
 
 # +
-df = pd.read_csv(f'df-{date.today().strftime("%m%d%Y")}.csv', index_col=0)
+df = pd.read_csv(f'data/df-02272021.csv', index_col=0)
+# df = pd.read_csv(f'data/df-{date.today().strftime("%m%d%Y")}.csv', index_col=0)
 
 df.columns.values
 df.dtypes
@@ -278,13 +280,54 @@ soup = get_page(test)
 ilink_ = [x['href'] for x in soup.select('h2 span a')] | p(filter, None) | p(list)
 ilink = [re.sub("//", "", x) for x in ilink_[::2] if x.startswith("//")]
 
-# Post page
-ppage = "https://news.slashdot.org/story/21/02/11/0029259/wall-street-fund-wants-to-hire-rwallstreetbets-users-to-help-pick-meme-stocks#comments"
+# post page
+ppage = "https://hardware.slashdot.org/story/21/03/01/0019243/boston-dynamics-is-selling-its-70-pound-robot-dog-to-police-departments"
 
 psoup = get_page(ppage)
 
-# Title / External Link / Comments
+# title / external link / comments
 tec = [x.get_text() for x in psoup.select("h2 span a")]
+tec
 
 ptitle, pelink = [x.get_text(' ', strip=True) for x in psoup.select("h2 span.story-title a")]
-pcomm = [x.get_text() for x in psoup.select(("span.comment-bubble"))] | px[0]
+
+# comment count
+pcomm = [x.get_text() for x in psoup.select("span.comment-bubble")] | px[0]
+
+# post score
+pscore = [re.sub(r'\(|\)|Score:', '', x.get_text()) for x in psoup.select("span[id*='comment_score_']")]
+
+# post scores with label
+sc = [x.split(', ') for x in pscore if ',' in x]
+sco, lab = list(zip(*sc))
+
+# user and user id
+users = [re.sub(r'\(|\)', '', x.get_text('', strip=True)).strip() for x in psoup.select('div.details span.by a')]
+uid, username = users[::2], users[1::2]
+
+# date
+# [x.text for x in psoup.select('div.details span[id*=comment_otherdetails_].otherdetails')]
+
+# comment titles
+comm_title = [x.get_text('', strip=True) for x in psoup.select('div.title')] | px[1:]
+
+# comment body
+comm_body = [x.get_text('', strip=True) for x in psoup.select('div.commentBody')]
+
+# top branch comments that have replies
+top_comm = [idx for idx, x in enumerate(comm_title) if not x.startswith('Re')]
+
+# the comments replying to top comments
+reply_comm = [top_comm[idx] - top_comm[idx-1] for idx in range(1, len(top_comm))]
+reply_comm.append(len(comm_title) - top_comm[-1])
+
+temp = {top_comm[i]: reply_comm[i] for i in range(len(top_comm))}
+
+all_reply_comm = {i: 0 for i in range(len(comm_title))}
+
+# create a dictionary of comment_index: replies
+for x in all_reply_comm.keys():
+    if x in temp.keys():
+        all_reply_comm[x] = temp[x]
+
+all_reply_comm
