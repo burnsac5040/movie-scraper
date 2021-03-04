@@ -14,9 +14,9 @@
 # ---
 
 # +
-import numpy as np 
+import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
 import seaborn as sns
 
 plt.rcParams['figure.dpi'] = 200
@@ -25,45 +25,45 @@ plt.style.use(['dark_background'])
 
 df = pd.read_csv('df/df_full.csv', index_col=0)
 
-# | Column Name | Meaning |
-# | :------------------ | -----: |
-# | `region` | Location of the home |
-# | `new` | 1 = New, 0 = Not new |
-# | `price` | Price of home |
-# | `bedrm` | Num bedrooms |
-# | `bth` | Num baths |
-# | `sqft` | Square footage |
-# | `crime` | 1 = lowest, 5 = highest |
-# | `typ_val` | Typical value of homes that are similar |
-# | `val_pct` | % this home differs from typ_val |
-# | `typ_sqft` | Typical sq footage of homes that are similar | 
-# | `sqft_pct` | % this home differes from typ_sqft |
-# | `eschl` | Num of elementary schools in area |
-# | `mschl` | Num of middle schools in area |
-# | `hscl` | Num of high schools in area |
-# | `bsmnt` | Basement, 1 = yes, 0 = no |
-# | `gas` | Heating = gas, 1 = yes, 0 = no |
-# | `forsdair` | Heating = forced air, 1 = yes, 0 = no |
-# | `elctric` | Heating = electric, 1 = yes, 0 = no |
-# | `solar` | Heating = solar, 1 = yes, 0 = no |
-# | `dayonmark` | Num days on market |
-# | `yrbuilt` | Year house was built |
-# | `update` | 1 = if house was updated, 0 = if not |
-# | `stories` | Num of stories |
-# | `n_rooms` | Num of rooms |
-# | `garage` | 1 = yes, 0 = no |
-# | `pp_sqft` | Price per sqft |
-# | `roof` | cat codes of roof type |
-# | `floors` | cat codes of floor type |
-# | `exterior` | cat codes of exterior type |
-# | `lot_sz` | Lot size (yard + living area) |
-# | `prk_spc` | Num of parking spaces | 
-# | `parking` | Parking type 0=None, 1=Underground, 2=Carport, 3=Garage |
-# | `hoa_fee` | Home association fee |
-# | `sec_sys` | Security system, 1 = yes, 0 = no |
-# | `pool` | 1 = yes, 0 = no |
-# | `list_cnt` | Num times house has been put up for listing |
-# | `assess` | 1 = tax assessment higher than price, 0 = not |
+ # | Column Name         | Meaning                                                 |
+ # | :------------------ | -----:                                                  |
+ # | `region`            | Location of the home                                    |
+ # | `new`               | 1 = New, 0 = Not new                                    |
+ # | `price`             | Price of home                                           |
+ # | `bedrm`             | Num bedrooms                                            |
+ # | `bth`               | Num baths                                               |
+ # | `sqft`              | Square footage                                          |
+ # | `crime`             | 1 = lowest, 5 = highest                                 |
+ # | `typ_val`           | Typical value of homes that are similar                 |
+ # | `val_pct`           | % this home differs from typ_val                        |
+ # | `typ_sqft`          | Typical sq footage of homes that are similar            |
+ # | `sqft_pct`          | % this home differes from typ_sqft                      |
+ # | `eschl`             | Num of elementary schools in area                       |
+ # | `mschl`             | Num of middle schools in area                           |
+ # | `hscl`              | Num of high schools in area                             |
+ # | `bsmnt`             | Basement, 1 = yes, 0 = no                               |
+ # | `gas`               | Heating = gas, 1 = yes, 0 = no                          |
+ # | `forsdair`          | Heating = forced air, 1 = yes, 0 = no                   |
+ # | `elctric`           | Heating = electric, 1 = yes, 0 = no                     |
+ # | `solar`             | Heating = solar, 1 = yes, 0 = no                        |
+ # | `dayonmark`         | Num days on market                                      |
+ # | `yrbuilt`           | Year house was built                                    |
+ # | `update`            | 1 = if house was updated, 0 = if not                    |
+ # | `stories`           | Num of stories                                          |
+ # | `n_rooms`           | Num of rooms                                            |
+ # | `garage`            | 1 = yes, 0 = no                                         |
+ # | `pp_sqft`           | Price per sqft                                          |
+ # | `roof`              | cat codes of roof type                                  |
+ # | `floors`            | cat codes of floor type                                 |
+ # | `exterior`          | cat codes of exterior type                              |
+ # | `lot_sz`            | Lot size (yard + living area)                           |
+ # | `prk_spc`           | Num of parking spaces                                   |
+ # | `parking`           | Parking type 0=None, 1=Underground, 2=Carport, 3=Garage |
+ # | `hoa_fee`           | Home association fee                                    |
+ # | `sec_sys`           | Security system, 1 = yes, 0 = no                        |
+ # | `pool`              | 1 = yes, 0 = no                                         |
+ # | `list_cnt`          | Num times house has been put up for listing             |
+ # | `assess`            | 1 = tax assessment higher than price, 0 = not           |
 
 # +
 fig, axes = plt.subplots(2, 2, sharex=True)
@@ -78,7 +78,7 @@ grpby = df.groupby('region').median()
 for i, col in enumerate(cols):
     sns.barplot(ax=axes[i], x=grpby.index, y=grpby[col], palette=next(colors)).set(xlabel=None, title=f'Median {next(titles)}')
     axes[i].set_xticklabels(['Col.', 'KC', 'LS', 'SL', 'Spring.'])
-    axes[i].grid(b=True, which='both', axis='y', alpha=0.35, ls='--')    
+    axes[i].grid(b=True, which='both', axis='y', alpha=0.35, ls='--')
 
 plt.tight_layout()
 
