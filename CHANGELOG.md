@@ -1,4 +1,14 @@
-### updated readme, added youtube.py (HEAD -> master)
+### updated slashdot slightly (HEAD -> master)
+>Wed, 10 Mar 2021 13:01:45 -0600
+
+>Author: Lucas Burns (burnsac@me.com)
+
+>Commiter: Lucas Burns (burnsac@me.com)
+
+
+
+
+### updated readme, added youtube.py (origin/master, home/master, gitlab/master)
 >Wed, 3 Mar 2021 23:33:29 -0600
 
 >Author: Lucas Burns (burnsac@me.com)
@@ -8,7 +18,7 @@
 
 
 
-### furthing slashdot (origin/master, home/master, gitlab/master)
+### furthing slashdot
 >Wed, 3 Mar 2021 10:52:22 -0600
 
 >Author: Lucas Burns (burnsac@me.com)

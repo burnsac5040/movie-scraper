@@ -37,7 +37,7 @@ NOTE: First serious project I uploaded to GitHub. It had its own repository and 
 - [Scraping](trulia/trulia_scraper.py): `BeautifulSoup` was used to scrape 2500 house listings on [Trulia](https://trulia.com) across five cities in Missouri (Columbia, Kansas City, St. Louis, Springfield, and Lee's Summit).  Data on each listing include things such as crime rate, schools in the area, listing history, tax history, etc.
 
 - [Cleaning](trulia/trulia_cleaning.py): The [csv](trulia/df/df_full.csv) that is the result of the cleaning was formatted in such a way that the categorical variables are in a  one-hot-encoded format (except for the region) and numeric variables were left alone.
--
+
 - [Analysis](trulia/trulia_analysis.py): The explanation of the variables can be found in the file tagged linked to 'analysis' at the beginning of this block.  House price, price per square foot, total square footage, and lot size is just one example of what was compared across the five cities in Missouri.
 
 - [Model](trulia/trulia_model.py): A linear regression algorithm that was coded from scratch was originally used but the results were all `nan` values, so `sklearn` was used instead.  The R2 score from the model was 0.72, however; the MSE was extremely high.  Perhaps a larger selection of the data (or better cleaning of the results) needs to be done to work better with the linear regression models.

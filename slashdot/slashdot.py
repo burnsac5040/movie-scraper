@@ -26,10 +26,10 @@ from bs4 import BeautifulSoup as bs
 import numpy as np
 import pandas as pd
 import requests
-from sspipe import p, px                  # piping tool like bash '|' or R '%>%'
+from sspipe import p, px        # piping tool like bash '|' or R '%>%'
 
-import tabloo                             # dataframe visualizer
-# import dfply                            # like dplyr
+import tabloo                   # dataframe visualizer
+# import dfply                  # like dplyr
 
 
 # +
@@ -65,7 +65,7 @@ tit = [t.get_text() for t in soup.select("h2 span a")]
 title = [j for i in soup.find_all("span", class_="story-title") for j in i.find("a")]
 
 # date/time of post
-import dateutil.parser
+# import dateutil.parser
 # dateutil.parser.parse('string')
 dated = [d.get_text() for d in soup.select("span.story-byline time")]
 date = [re.sub("on|@", "", x).strip() for x in dated]
@@ -287,7 +287,6 @@ psoup = get_page(ppage)
 
 # title / external link / comments
 tec = [x.get_text() for x in psoup.select("h2 span a")]
-tec
 
 ptitle, pelink = [x.get_text(' ', strip=True) for x in psoup.select("h2 span.story-title a")]
 
@@ -296,6 +295,7 @@ pcomm = [x.get_text() for x in psoup.select("span.comment-bubble")] | px[0]
 
 # post score
 pscore = [re.sub(r'\(|\)|Score:', '', x.get_text()) for x in psoup.select("span[id*='comment_score_']")]
+pscore_only = [re.sub(r"[a-zA-Z]+", '', x.replace(",", "").replace(" ", "")) for x in pscore]
 
 # post scores with label
 sc = [x.split(', ') for x in pscore if ',' in x]
@@ -303,7 +303,9 @@ sco, lab = list(zip(*sc))
 
 # user and user id
 users = [re.sub(r'\(|\)', '', x.get_text('', strip=True)).strip() for x in psoup.select('div.details span.by a')]
-uid, username = users[::2], users[1::2]
+users = [x for x in users if x != '*']
+username, uid = users[::2], users[1::2]
+
 
 # date
 # [x.text for x in psoup.select('div.details span[id*=comment_otherdetails_].otherdetails')]
@@ -316,6 +318,7 @@ comm_body = [x.get_text('', strip=True) for x in psoup.select('div.commentBody')
 
 # top branch comments that have replies
 top_comm = [idx for idx, x in enumerate(comm_title) if not x.startswith('Re')]
+top_comm
 
 # the comments replying to top comments
 reply_comm = [top_comm[idx] - top_comm[idx-1] for idx in range(1, len(top_comm))]
@@ -326,8 +329,15 @@ temp = {top_comm[i]: reply_comm[i] for i in range(len(top_comm))}
 all_reply_comm = {i: 0 for i in range(len(comm_title))}
 
 # create a dictionary of comment_index: replies
+# is not replies of replies
 for x in all_reply_comm.keys():
     if x in temp.keys():
         all_reply_comm[x] = temp[x]
 
-all_reply_comm
+# top 5 comment attributes
+top5_comm_index = sorted(all_reply_comm.items(), key=lambda x: x[1], reverse=True)[:5]
+
+top5_comm_body = [comm_body[x[0]] for x in top5_comm_index]
+top5_pscore = [pscore_only[x[0]] for x in top5_comm_index]
+top5_comm_title = [re.sub(r'\(\w+:\d,?(\s\w+)?\)', '', comm_title[x[0]]) for x in top5_comm_index]
+top5_username = [username[x[0]] for x in top5_comm_index]
