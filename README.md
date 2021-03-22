@@ -1,8 +1,7 @@
-## Web Scraping with Python
 ---------------------------
 
 ### [Kelley Blue Book](kbb)
-NOTE: First serious project I uploaded to GitHub. It had its own repository and was moved here to make my projects a little bit cleaner.
+NOTE: This had its own repository and was moved here to make my projects a little bit cleaner.
 
 - [Scraping](kbb/kbb_scraper.py): `BeautifulSoup` was used to scrape [Kelley Blue Book](https://www.kbb.com) for vehicle data within a 75 mile radius of the area that I live in. Information that was scraped includes vehicle title, price, mileage, whether the vehicle was in an accident, whether it had a previous owner, interior and exterior color, etc.
 
@@ -42,6 +41,7 @@ NOTE: First serious project I uploaded to GitHub. It had its own repository and 
 
 - [Model](trulia/trulia_model.py): A linear regression algorithm that was coded from scratch was originally used but the results were all `nan` values, so `sklearn` was used instead.  The R2 score from the model was 0.72, however; the MSE was extremely high.  Perhaps a larger selection of the data (or better cleaning of the results) needs to be done to work better with the linear regression models.
 
+-----------------------
 ### [Slashdot](slashdot) [WIP]
 
 - [Scraping](slashdot/slashdot.py): `BeautifulSoup` is being used to scrape posts on slashdot to eventually perform a sentiment analysis on the posts' titles, and the comments on the posts.
