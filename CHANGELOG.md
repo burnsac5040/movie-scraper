@@ -1,4 +1,14 @@
-### modified line in readme (HEAD -> master)
+### fixed grammar readme (HEAD -> master)
+>Mon, 22 Mar 2021 10:45:08 -0500
+
+>Author: Lucas Burns (burnsac@me.com)
+
+>Commiter: Lucas Burns (burnsac@me.com)
+
+
+
+
+### modified line in readme (origin/master, home/master, gitlab/master)
 >Sun, 21 Mar 2021 22:07:07 -0500
 
 >Author: Lucas Burns (burnsac@me.com)
@@ -8,7 +18,7 @@
 
 
 
-### updated slashdot slightly (origin/master, home/master, gitlab/master)
+### updated slashdot slightly
 >Wed, 10 Mar 2021 13:01:45 -0600
 
 >Author: Lucas Burns (burnsac@me.com)
