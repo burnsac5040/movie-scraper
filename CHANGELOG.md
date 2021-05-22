@@ -1,4 +1,14 @@
-### fixed grammar readme (HEAD -> master)
+### added 4chan scraper - initial commit for this project (HEAD -> master)
+>Sat, 22 May 2021 09:34:15 -0500
+
+>Author: Lucas Burns (burnsac@me.com)
+
+>Commiter: Lucas Burns (burnsac@me.com)
+
+
+
+
+### fixed grammar readme (origin/master, home/master, gitlab/master)
 >Mon, 22 Mar 2021 10:45:08 -0500
 
 >Author: Lucas Burns (burnsac@me.com)
@@ -8,7 +18,7 @@
 
 
 
-### modified line in readme (origin/master, home/master, gitlab/master)
+### modified line in readme
 >Sun, 21 Mar 2021 22:07:07 -0500
 
 >Author: Lucas Burns (burnsac@me.com)
