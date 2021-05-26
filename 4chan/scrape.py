@@ -64,6 +64,7 @@ def uniset(inp):
 # board: e.g., /pol/ (there's only one, can't call '.text')
 board = [s.get_text() for s in soup.select("div.boardTitle")][0]
 
+# == posts == {{{
 # Anonymous (ID: 2o5j+xkQ)  05/21/21(Fri)20:29:50 No.3...
 post_id_date = [s.get_text() for s in soup.select(".post")]
 # [s for s in soup.select('.postMessage')]
@@ -80,7 +81,9 @@ for s in soup.select("span.postNum"):
 
 # post: number of sticky
 n_sticky = uniset([x.split("/")[0] for x in sticky])
+# }}} == post ==
 
+# == user == {{{
 # usernames: e.g., Anonymous
 usernames = [s.get_text() for s in soup.select("span.name")]
 
@@ -90,12 +93,14 @@ posterid = [re.sub(r"ID(?=:)|[(): ]", "", s) for s in posteruid]
 
 # country_flag: e.g., Austria
 flag = [s["title"] for s in soup.select("span.flag")]
+# }}} == user ==
 
+# == image == {{{
 # image_title: e.g., check catalog.jpg
 img_title = [s.get_text() for s in soup.select(".fileText a")]
 # [s.get_text() for s in soup.select('.fileText')]
 
-# image size in KB
+# image size: 40 KB
 img_size = []
 for s in soup.select(".fileText"):
     try:
@@ -106,11 +111,18 @@ for s in soup.select(".fileText"):
 #  img_size = [x for x in img_size if x is not None]
 #  img_size = ['NA' if x is None else x for x in img_size] # put in try except?
 
-# convert mb to kb
-img_size = [
-    "{} KB".format(float(re.sub("\s?MB", "", x)) * 1000) if "MB" in x else x
-    for x in img_size
-]
+ii = []
+for s in img_size:
+    if s is None:
+        ii.append("0 KB")
+    elif "MB" in s:
+        ii.append("{} KB".format(float(re.sub(r"\s?MB", "", x)) * 1000))
+    else:
+        ii.append(s)
+
+# reassignment instead of naming something like 'img_sized' & 'img_size'
+img_size = ii
+print(img_size)
 
 # image dimensions: e.g, 400x400
 img_dim = []
@@ -119,38 +131,50 @@ for s in soup.select(".fileText"):
         img_dim.append(re.search(r"(?<=,\s)\d+x\d+", s.get_text()).group())
     except AttributeError:
         img_dim.append(re.search(r"(?<=,\s)\d+x\d+", s.get_text()))
+# }}} == image ==
 
-# Thread: e.g., thread/322626957#q322631216 -- #p = link; #q = reply
+# == thread == {{{
+# thread: e.g., thread/322626957#q322631216 -- #p = link; #q = reply
 thread_post = [
     re.sub(r"#(q|p)", "/", s["href"]).replace("thread/", "")
     for s in soup.select("span.postNum a")
 ] | p(uniset)
 
-# Thread: & posts ids
+# thread: & posts ids
 thread, post = map(list, zip(*(s.split("/") for s in thread_post)))
 
-# Thread Post Dict: dict ids: e.g., thread : [p1, p2]
+# thread post dict: dict ids: e.g., thread : [p1, p2]
 thread_d = defaultdict(list)
 for x in [s.split("/") for s in thread_post]:
     thread_d[x[0]].append(x[1])
+# }}} == thread ==
 
+# == OG post == {{{
 # OP: Anonymous ## Mod    05/31/20(Sun)15:07:39 No. ...
 post_op = [s.get_text() for s in soup.select(".post.op")]
 print(post_op[1])
 
 # OP: post id
 op_id = [re.search(r"(?<=No.)\d+", s).group(0) for s in post_op]
+# }}} == OG post ==
 
-# number of replies
+# == replies == {{{
+# save list to guarantee correct thread; probably better way to do this
+replies = u" ".join(str(x) for x in soup.select("span.summary"))
+replies_bs = bs(replies, "html.parser")
+
 replies = [
     re.search(r"\d+(?=\sreplies)", x.get_text()).group(0)
-    for x in soup.select("span.summary")
+    for x in replies_bs.select("span.summary")
 ]
 
-[x["href"] for x in soup.select("span.summary a")]
+reply_thread_n = [
+    x["href"].replace("thread/", "") for x in replies_bs.select("span.summary a")
+]
 
-for x in soup.select("span.summary"):
-    print(x.select("a"), x.get_text())
+if len(replies) == len(thread):
+    replies_d = dict(zip(reply_thread_n, replies))
+# }}} == replies ==
 
 #  {x : x.get_text() for x in soup.select('span.summary')}
 
