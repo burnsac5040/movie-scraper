@@ -1,4 +1,14 @@
-### forgot to commit earlier (HEAD -> master)
+### started functionizing (HEAD -> master)
+>Mon, 31 May 2021 01:13:06 -0500
+
+>Author: Lucas Burns (lucas@lucasburns.xyz)
+
+>Commiter: Lucas Burns (lucas@lucasburns.xyz)
+
+
+
+
+### forgot to commit earlier (origin/master, home/master, gitlab/master)
 >Wed, 26 May 2021 15:06:39 -0500
 
 >Author: Lucas Burns (lucas@lucasburns.xyz)
@@ -8,7 +18,7 @@
 
 
 
-### added 4chan scraper - initial commit for this project (origin/master, home/master, gitlab/master)
+### added 4chan scraper - initial commit for this project
 >Sat, 22 May 2021 09:34:15 -0500
 
 >Author: Lucas Burns (burnsac@me.com)
