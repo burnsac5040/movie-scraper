@@ -11,6 +11,7 @@ from collections import defaultdict
 from sspipe import p, px  # unix-like pipe
 import re
 import os
+import time
 
 import numpy as np
 import pandas as pd
@@ -20,8 +21,14 @@ import matplotlib.pyplot as plt
 
 from bs4 import BeautifulSoup as bs
 import requests
-
 # }}} === imports
+
+
+# sspipe examples {{{
+[1, 2, 3, 4] | p(map, p([p(str), px%2])) | p(dict)
+[1, 2, 3, 4] | p(lambda l: reduce(lambda x, y: x+y, l))
+dict([(1,1),(4,2),(2,3)]).items() / p(sorted) | p(OrderedDict)
+# }}}
 
 # === beautifulsoup setup {{{
 url = "https://boards.4chan.org/pol/"
@@ -40,8 +47,21 @@ headers = {
     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36",
 }
 
-r = requests.get(url, headers=headers)
-soup = bs(r.text, "html.parser")
+def get_page(url, headers="", sleep=False, prnt=False):
+    response = requests.get(url, headers=headers)
+    if not response.ok:
+        print("Server Responded: ", response.status_code)
+        return
+    else:
+        soup = bs(response.text, "html.parser")
+        patt = re.compile(r'\d+')
+        if sleep:
+            time.sleep(3)
+        if prnt:
+            print(f'Number {patt.search(url).group(): ^5}done')
+    return soup
+
+soup = get_page(url, headers)
 # }}} === beautifulsoup setup
 
 # === helper functions {{{
@@ -61,8 +81,8 @@ def rm_na(ltr, t2repl):  # {{{
     Replace na/null values in a list (ltr = list 2 trans; t2repl = text 2 replace)
     """
     ltr = np.asarray(ltr)
+    # is None doesn't work?
     return list(np.where(np.logical_or(ltr != ltr, ltr == None), t2repl, ltr))  # }}}
-
 
 def mb2kb(l2trans):  # {{{
     """
@@ -89,6 +109,7 @@ def gboard(soup):  # {{{
 
 # == posts == {{{
 
+
 def gwhole_post(soup):  # {{{
     """
     Anonymous (ID: 2o5j+xkQ)  05/21/21(Fri)20:29:50 No.3...
@@ -112,19 +133,16 @@ def gsticky(soup):  # {{{
                 sticky[tsub(s)] = 0
     return dict(uniset([(x[0].split("/")[0], x[1]) for x in sticky.items()]))  # }}}
 
-sticky = gsticky(soup)
 
 # }}} == post ==
 
 # == user == {{{
-
 def gusernames(soup):  # {{{
     """
     usernames: e.g., Anonymous
     """
     return [s.get_text() for s in soup.select("span.name")]  # }}}
 
-usernames = gusernames(soup)
 
 def guid(soup):  # {{{
     """
@@ -133,8 +151,6 @@ def guid(soup):  # {{{
     posteruid = [s.get_text() for s in soup.select("span.posteruid")]
     return [re.sub(r"ID(?=:)|[(): ]", "", s) for s in posteruid]  # }}}
 
-uid = guid(soup)
-
 
 def gflag(soup):  # {{{
     """
@@ -142,78 +158,79 @@ def gflag(soup):  # {{{
     """
     return [s["title"] for s in soup.select("span.flag")]  # }}}
 
-flag = gflag(soup)
 # }}} == user ==
 
 # == image == {{{
+
 
 def gimg_name(soup):  # {{{
     """
     image_title: e.g., check catalog.jpg
     """
     return [s.get_text() for s in soup.select(".fileText a")]  # }}}
-# [s.get_text() for s in soup.select('.fileText')]
 
 
 def gimg_size(soup):  # {{{
     """
     @return image size in kilobytes
     """
-    # NOTE: not used
-    def lsub(x, sub):
-        return float(re.sub(r"\s?"+sub, "", x))
     img_size = []
     for s in soup.select(".fileText"):
         try:
             img_size.append(re.search(r"(?<=\()\d+\s(K|M)B", s.get_text()).group())
         except AttributeError:
             img_size.append(re.search(r"(?<=\()\d+\s(K|M)B", s.get_text()))
+    return img_size | p(rm_na, '0 KB') | p(mb2kb)  # }}} much more elegant IMO
+    #  return mb2kb(rm_na(img_size, '0 KB'))
 
-    rm_na(img_size, "0 KB")
-    ii = []
-    for s in img_size:
-        if s is None:
-            ii.append('0 KB')
-        elif "MB" in s:
-            ii.append(mb2kb(rm_na(s, "0 KB")))
-        else:
-            ii.append(s)
-    # maybe clean up
-    return [float(re.sub(r"\s?(MB|KB)", "", str(x))) for x in img_size]  #}}}
-
-#  ii = []
-#  for s in img_size:
-#      if s is None:
-#          ii.append('0 KB')
-#      elif "MB" in s:
-#          ii.append(mb2kb(rm_na(s, "0 KB")))
-#      else:
-#          ii.append(s)
-#  # maybe clean up
-#  return [float(re.sub(r"\s?(MB|KB)", "", str(x))) for x in img_size]  #}}}
+gg = gimg_size(soup)
 
 
-img_size = gimg_size(soup)
-# }}}
+def gimg_dim(soup):  # {{{
+    """
+    Return width, height of image
+    """
+    img_dim = []
+    for s in soup.select(".fileText"):
+        try:
+            img_dim.append(re.search(r"(?<=,\s)\d+x\d+", s.get_text()).group())
+        except AttributeError:
+            img_dim.append(re.search(r"(?<=,\s)\d+x\d+", s.get_text()))
 
-#  img_size = [x for x in img_size if x is not None]
-#  img_size = ['NA' if x is None else x for x in img_size] # put in try except?
+    return [x.split("x") for x in img_dim] | p(lambda l: list(zip(*l)))  # }}}
 
-# image dimensions: e.g, 400x400
-img_dim = []
-for s in soup.select(".fileText"):
-    try:
-        img_dim.append(re.search(r"(?<=,\s)\d+x\d+", s.get_text()).group())
-    except AttributeError:
-        img_dim.append(re.search(r"(?<=,\s)\d+x\d+", s.get_text()))
+w, h = gimg_dim(soup)
+
 # }}} == image ==
+
+def gthread_post(soup):  # {{{
+    """
+    #' @return data.table; thread_id & all post_ids
+    """
+    #  [re.sub(r"#(q|p)", "/", s["href"].replace("thread/", "") for s in ...]
+    thread_id, post_id = (     # ? more readable
+        [s["href"] | p(re.sub, r"#(q|p)", "/", px) | px.replace("thread/", "")
+         for s in soup.select("span.postNum a")]
+        | p(uniset)
+        | p(map, px.split("/"))
+        | p(lambda l: list(zip(*l)))
+    )
+    return thread_id, post_id  # }}}
+
+ff, xx = gthread_post(soup)
+
+
+#    ddf <- data.frame(thread_id,post_id)
+#
+#    # stackoverflow.com/questions/33523320
+#    dtt <- setDT(ddf)[, do.call(paste, c(.SD, list(collapse=', '))), thread_id]
+#    dt1 <- cSplit(dtt, 'V1', sep='[ ,]+', fixed=FALSE, stripWhite=TRUE)
+#    setnames(dt1, 2:ncol(dt1), rep(names(ddf)[-1], 7))
+#    return(dt1)
+#  }
 
 # == thread == {{{
 # thread: e.g., thread/322626957#q322631216 -- #p = link; #q = reply
-thread_post = [
-    re.sub(r"#(q|p)", "/", s["href"]).replace("thread/", "")
-    for s in soup.select("span.postNum a")
-] | p(uniset)
 
 # thread: & posts ids
 thread, post = map(list, zip(*(s.split("/") for s in thread_post)))

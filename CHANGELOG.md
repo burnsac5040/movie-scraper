@@ -1,4 +1,14 @@
-### started functionizing (HEAD -> master)
+### using sspipe to do unix style pipes - more readable (HEAD -> master)
+>Mon, 31 May 2021 12:18:55 -0500
+
+>Author: Lucas Burns (lucas@lucasburns.xyz)
+
+>Commiter: Lucas Burns (lucas@lucasburns.xyz)
+
+
+
+
+### started functionizing (origin/master, home/master, gitlab/master)
 >Mon, 31 May 2021 01:13:06 -0500
 
 >Author: Lucas Burns (lucas@lucasburns.xyz)
@@ -8,7 +18,7 @@
 
 
 
-### forgot to commit earlier (origin/master, home/master, gitlab/master)
+### forgot to commit earlier
 >Wed, 26 May 2021 15:06:39 -0500
 
 >Author: Lucas Burns (lucas@lucasburns.xyz)
