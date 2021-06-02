@@ -1,4 +1,14 @@
-### using sspipe to do unix style pipes - more readable (HEAD -> master)
+### functionized the rest, created dictionaries for mappings (HEAD -> master)
+>Wed, 2 Jun 2021 13:34:32 -0500
+
+>Author: Lucas Burns (lucas@burnsac.xyz)
+
+>Commiter: Lucas Burns (lucas@burnsac.xyz)
+
+
+
+
+### using sspipe to do unix style pipes - more readable (origin/master, home/master, gitlab/master)
 >Mon, 31 May 2021 12:18:55 -0500
 
 >Author: Lucas Burns (lucas@lucasburns.xyz)
@@ -8,7 +18,7 @@
 
 
 
-### started functionizing (origin/master, home/master, gitlab/master)
+### started functionizing
 >Mon, 31 May 2021 01:13:06 -0500
 
 >Author: Lucas Burns (lucas@lucasburns.xyz)

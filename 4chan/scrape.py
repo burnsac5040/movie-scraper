@@ -10,14 +10,14 @@
 from collections import defaultdict
 from sspipe import p, px  # unix-like pipe
 import re
-import os
+#  import os
 import time
 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-#  import tabloo  # data visualizer
+import visidata
 
 from bs4 import BeautifulSoup as bs
 import requests
@@ -25,9 +25,9 @@ import requests
 
 
 # sspipe examples {{{
-[1, 2, 3, 4] | p(map, p([p(str), px%2])) | p(dict)
-[1, 2, 3, 4] | p(lambda l: reduce(lambda x, y: x+y, l))
-dict([(1,1),(4,2),(2,3)]).items() / p(sorted) | p(OrderedDict)
+#  [1, 2, 3, 4] | p(map, p([p(str), px%2])) | p(dict)
+#  [1, 2, 3, 4] | p(lambda l: reduce(lambda x, y: x+y, l))
+#  dict([(1,1),(4,2),(2,3)]).items() / p(sorted) | p(OrderedDict)
 # }}}
 
 # === beautifulsoup setup {{{
@@ -83,6 +83,7 @@ def rm_na(ltr, t2repl):  # {{{
     ltr = np.asarray(ltr)
     # is None doesn't work?
     return list(np.where(np.logical_or(ltr != ltr, ltr == None), t2repl, ltr))  # }}}
+
 
 def mb2kb(l2trans):  # {{{
     """
@@ -183,8 +184,6 @@ def gimg_size(soup):  # {{{
     return img_size | p(rm_na, '0 KB') | p(mb2kb)  # }}} much more elegant IMO
     #  return mb2kb(rm_na(img_size, '0 KB'))
 
-gg = gimg_size(soup)
-
 
 def gimg_dim(soup):  # {{{
     """
@@ -205,33 +204,40 @@ w, h = gimg_dim(soup)
 
 def gthread_post(soup):  # {{{
     """
-    #' @return data.table; thread_id & all post_ids
+    @return data.table; thread_id & all post_ids
     """
     #  [re.sub(r"#(q|p)", "/", s["href"].replace("thread/", "") for s in ...]
-    thread_id, post_id = (     # ? more readable
+    df = (
         [s["href"] | p(re.sub, r"#(q|p)", "/", px) | px.replace("thread/", "")
          for s in soup.select("span.postNum a")]
         | p(uniset)
         | p(map, px.split("/"))
-        | p(lambda l: list(zip(*l)))
+        | p(filter, px[0] != px[1])
+        #  | p(lambda l: list(zip(*l)))
+        | p(pd.DataFrame, columns=['thread', 'post'])
     )
-    return thread_id, post_id  # }}}
+    #  ff = list(zip(thread_id, post_id))
+    #  df = pd.DataFrame({'thread':thread_id, 'post':post_id})
 
-ff, xx = gthread_post(soup)
+    df = df.groupby('thread')['post'].apply(np.array).reset_index(name='post')
+    post_df = (
+        pd.DataFrame(df['post'].to_list())
+            | px.rename(columns = lambda x: 'post_' + str(x))
+            | px.fillna(np.nan)
+    )
+    df = pd.concat([df, post_df], axis=1).drop('post', axis=1)
 
+    return df  # }}}
 
-#    ddf <- data.frame(thread_id,post_id)
-#
-#    # stackoverflow.com/questions/33523320
-#    dtt <- setDT(ddf)[, do.call(paste, c(.SD, list(collapse=', '))), thread_id]
-#    dt1 <- cSplit(dtt, 'V1', sep='[ ,]+', fixed=FALSE, stripWhite=TRUE)
-#    setnames(dt1, 2:ncol(dt1), rep(names(ddf)[-1], 7))
-#    return(dt1)
-#  }
+df = gthread_post(soup)
+thread_post_dict = df.set_index('thread').T.to_dict('list')
+thread_post_dict['124205675']
+
+visidata.view_pandas(df)
+visidata.pyobj.view(df)
 
 # == thread == {{{
 # thread: e.g., thread/322626957#q322631216 -- #p = link; #q = reply
-
 # thread: & posts ids
 thread, post = map(list, zip(*(s.split("/") for s in thread_post)))
 
@@ -242,29 +248,53 @@ for x in [s.split("/") for s in thread_post]:
 # }}} == thread ==
 
 # == OG post == {{{
-# OP: Anonymous ## Mod    05/31/20(Sun)15:07:39 No. ...
-post_op = [s.get_text() for s in soup.select(".post.op")]
 
-# OP: post id
-op_id = [re.search(r"(?<=No.)\d+", s).group(0) for s in post_op]
+def gpost_opt(soup):  # {{{
+    """
+    OP full post
+    OP id: Anonymous ## Mod    05/31/20(Sun)15:07:39 No. ...
+    """
+    post_op = [s.get_text() for s in soup.select(".post.op")]
+    op_id = [re.search(r"(?<=No.)\d+", s).group(0) for s in post_op]
+    return pd.DataFrame({'post_op': post_op, 'thread':  op_id})  # }}}
+
+op_df = gpost_opt(soup)
+mrg_df = df.merge(op_df, how='outer')
+
 # }}} == OG post ==
 
 # == replies == {{{
-# save list to guarantee correct thread; probably better way to do this
-replies = u" ".join(str(x) for x in soup.select("span.summary"))
-replies_bs = bs(replies, "html.parser")
+def greply_gimg(soup):  # {{{
+    thread_replies = {}
+    for x in soup.select("span.summary"):
+        try:
+            replies = re.search(r"\d+(?=\sreplies)", x.get_text()).group()
+        except AttributeError:
+            replies = re.search(r"\d+(?=\sreplies)", x.get_text())
 
-replies = [
-    re.search(r"\d+(?=\sreplies)", x.get_text()).group(0)
-    for x in replies_bs.select("span.summary")
-]
+        try:
+            images = re.search(r"\d+(?=\simage)", x.get_text()).group()
+        except AttributeError:
+            images = re.search(r"\d+(?=\simage)", x.get_text())
 
-reply_thread_n = [
-    x["href"].replace("thread/", "") for x in replies_bs.select("span.summary a")
-]
+        for y in x.select('a'):
+            # thread id
+            thread_n = y['href'].replace("thread/", "")
 
-if len(replies) == len(thread):
-    replies_d = dict(zip(reply_thread_n, replies))
+        thread_replies[thread_n] = tuple((replies, images))  # num replies, num image replies
+
+    thread_replies = (
+        pd.DataFrame(thread_replies).T
+        | px.rename_axis('thread')
+        | px.reset_index()
+        | px.rename(columns={0:'n_replies', 1:'n_imgs'})
+    )
+
+    thread_replies_dict = thread_replies.set_index('thread').T.to_dict('list')
+    return thread_replies, thread_replies_dict
+    # }}}
+
+replies_df, replies_dict = greply_gimg(soup)
 # }}} == replies ==
 
 #  {x : x.get_text() for x in soup.select('span.summary')}
