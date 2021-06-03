@@ -204,7 +204,7 @@ w, h = gimg_dim(soup)
 
 def gthread_post(soup):  # {{{
     """
-    @return data.table; thread_id & all post_ids
+    @return dataframe thread_id & all post_ids
     """
     #  [re.sub(r"#(q|p)", "/", s["href"].replace("thread/", "") for s in ...]
     df = (
@@ -226,12 +226,12 @@ def gthread_post(soup):  # {{{
             | px.fillna(np.nan)
     )
     df = pd.concat([df, post_df], axis=1).drop('post', axis=1)
+    thread_post_dict = df.set_index('thread').T.to_dict('list')
 
-    return df  # }}}
+    return df, thread_post_dict  # }}}
 
-df = gthread_post(soup)
-thread_post_dict = df.set_index('thread').T.to_dict('list')
-thread_post_dict['124205675']
+df, thread_post_dict = gthread_post(soup)
+#  thread_post_dict[list(thread_post_dict.keys())[2]]
 
 visidata.view_pandas(df)
 visidata.pyobj.view(df)
@@ -256,7 +256,7 @@ def gpost_opt(soup):  # {{{
     """
     post_op = [s.get_text() for s in soup.select(".post.op")]
     op_id = [re.search(r"(?<=No.)\d+", s).group(0) for s in post_op]
-    return pd.DataFrame({'post_op': post_op, 'thread':  op_id})  # }}}
+    return pd.DataFrame({'post_op': post_op, 'thread':  op_id}).set_index('thread')  # }}}
 
 op_df = gpost_opt(soup)
 mrg_df = df.merge(op_df, how='outer')
@@ -296,5 +296,3 @@ def greply_gimg(soup):  # {{{
 
 replies_df, replies_dict = greply_gimg(soup)
 # }}} == replies ==
-
-#  {x : x.get_text() for x in soup.select('span.summary')}
