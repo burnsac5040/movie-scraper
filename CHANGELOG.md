@@ -1,4 +1,14 @@
-### domain switch (HEAD -> master)
+### modified email (HEAD -> master)
+>Mon, 7 Jun 2021 21:33:52 -0500
+
+>Author: Lucas Burns (lmb@lmburns.com)
+
+>Commiter: Lucas Burns (lmb@lmburns.com)
+
+
+
+
+### domain switch (origin/master, home/master, gitlab/master)
 >Thu, 3 Jun 2021 13:11:21 -0500
 
 >Author: Lucas Burns (lucas@burnsac.xyz)
@@ -8,7 +18,7 @@
 
 
 
-### functionized the rest, created dictionaries for mappings (origin/master, home/master, gitlab/master)
+### functionized the rest, created dictionaries for mappings
 >Wed, 2 Jun 2021 13:34:32 -0500
 
 >Author: Lucas Burns (lucas@burnsac.xyz)
